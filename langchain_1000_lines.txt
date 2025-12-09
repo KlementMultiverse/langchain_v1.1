@@ -1,0 +1,1803 @@
+<div align="center">
+  <a href="https://www.langchain.com/">
+    <picture>
+      <source media="(prefers-color-scheme: light)" srcset=".github/images/logo-dark.svg">
+      <source media="(prefers-color-scheme: dark)" srcset=".github/images/logo-light.svg">
+      <img alt="LangChain Logo" src=".github/images/logo-dark.svg" width="80%">
+    </picture>
+  </a>
+</div>
+
+<div align="center">
+  <h3>The platform for reliable agents.</h3>
+</div>
+
+<div align="center">
+  <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/pypi/l/langchain" alt="PyPI - License"></a>
+  <a href="https://pypistats.org/packages/langchain" target="_blank"><img src="https://img.shields.io/pepy/dt/langchain" alt="PyPI - Downloads"></a>
+  <a href="https://pypi.org/project/langchain/#history" target="_blank"><img src="https://img.shields.io/pypi/v/langchain?label=%20" alt="Version"></a>
+  <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/langchain-ai/langchain" target="_blank"><img src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode" alt="Open in Dev Containers"></a>
+  <a href="https://codespaces.new/langchain-ai/langchain" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open in Github Codespace" title="Open in Github Codespace" width="150" height="20"></a>
+  <a href="https://codspeed.io/langchain-ai/langchain" target="_blank"><img src="https://img.shields.io/endpoint?url=https://codspeed.io/badge.json" alt="CodSpeed Badge"></a>
+  <a href="https://twitter.com/langchainai" target="_blank"><img src="https://img.shields.io/twitter/url/https/twitter.com/langchainai.svg?style=social&label=Follow%20%40LangChainAI" alt="Twitter / X"></a>
+</div>
+
+LangChain is a framework for building agents and LLM-powered applications. It helps you chain together interoperable components and third-party integrations to simplify AI application development – all while future-proofing decisions as the underlying technology evolves.
+
+```bash
+pip install langchain
+```
+
+If you're looking for more advanced customization or agent orchestration, check out [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview), our framework for building controllable agent workflows.
+
+---
+
+**Documentation**:
+
+- [docs.langchain.com](https://docs.langchain.com/oss/python/langchain/overview) – Comprehensive documentation, including conceptual overviews and guides
+- [reference.langchain.com/python](https://reference.langchain.com/python) – API reference docs for LangChain packages
+
+**Discussions**: Visit the [LangChain Forum](https://forum.langchain.com) to connect with the community and share all of your technical questions, ideas, and feedback.
+
+> [!NOTE]
+> Looking for the JS/TS library? Check out [LangChain.js](https://github.com/langchain-ai/langchainjs).
+
+## Why use LangChain?
+
+LangChain helps developers build applications powered by LLMs through a standard interface for models, embeddings, vector stores, and more.
+
+Use LangChain for:
+
+- **Real-time data augmentation**. Easily connect LLMs to diverse data sources and external/internal systems, drawing from LangChain's vast library of integrations with model providers, tools, vector stores, retrievers, and more.
+- **Model interoperability**. Swap models in and out as your engineering team experiments to find the best choice for your application's needs. As the industry frontier evolves, adapt quickly – LangChain's abstractions keep you moving without losing momentum.
+- **Rapid prototyping**. Quickly build and iterate on LLM applications with LangChain's modular, component-based architecture. Test different approaches and workflows without rebuilding from scratch, accelerating your development cycle.
+- **Production-ready features**. Deploy reliable applications with built-in support for monitoring, evaluation, and debugging through integrations like LangSmith. Scale with confidence using battle-tested patterns and best practices.
+- **Vibrant community and ecosystem**. Leverage a rich ecosystem of integrations, templates, and community-contributed components. Benefit from continuous improvements and stay up-to-date with the latest AI developments through an active open-source community.
+- **Flexible abstraction layers**. Work at the level of abstraction that suits your needs - from high-level chains for quick starts to low-level components for fine-grained control. LangChain grows with your application's complexity.
+
+## LangChain ecosystem
+
+While the LangChain framework can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools when building LLM applications.
+
+To improve your LLM application development, pair LangChain with:
+
+- [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview) – Build agents that can reliably handle complex tasks with LangGraph, our low-level agent orchestration framework. LangGraph offers customizable architecture, long-term memory, and human-in-the-loop workflows – and is trusted in production by companies like LinkedIn, Uber, Klarna, and GitLab.
+- [Integrations](https://docs.langchain.com/oss/python/integrations/providers/overview) – List of LangChain integrations, including chat & embedding models, tools & toolkits, and more
+- [LangSmith](https://www.langchain.com/langsmith) – Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.
+- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployments) – Deploy and scale agents effortlessly with a purpose-built deployment platform for long-running, stateful workflows. Discover, reuse, configure, and share agents across teams – and iterate quickly with visual prototyping in [LangSmith Studio](https://docs.langchain.com/langsmith/studio).
+- [Deep Agents](https://github.com/langchain-ai/deepagents) *(new!)* – Build agents that can plan, use subagents, and leverage file systems for complex tasks
+
+## Additional resources
+
+- [API Reference](https://reference.langchain.com/python) – Detailed reference on navigating base packages and integrations for LangChain.
+- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) – Learn how to contribute to LangChain projects and find good first issues.
+- [Code of Conduct](https://github.com/langchain-ai/langchain/blob/master/.github/CODE_OF_CONDUCT.md) – Our community guidelines and standards for participation.
+# 🦜🔗 Awesome LangChain [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![GitHub Repo stars](https://img.shields.io/github/stars/kyrolabs/awesome-langchain?style=social)
+
+> Curated list of tools and projects using LangChain.
+
+LangChain is an amazing framework to get LLM projects done in a matter of no time, and the ecosystem is growing fast.
+Here is an attempt to keep track of the initiatives around LangChain.
+
+**[Subscribe to the newsletter](https://awesomelangchain.substack.com/)** to stay informed about the Awesome LangChain. We send a couple of emails per month about the articles, videos, projects, and tools that grabbed our attention
+
+Contributions welcome. Add links through pull requests or create an issue to start a discussion. Please read the [contribution guidelines](contributing.md) before contributing.
+
+## Table of Contents
+
+- [🦜🔗 Awesome LangChain ](#-awesome-langchain--)
+  - [Table of Contents](#table-of-contents)
+  - [LangChain Framework](#langchain-framework)
+  - [Ports to other languages](#ports-to-other-languages)
+  - [Tools](#tools)
+    - [Low-code](#low-code)
+    - [Services](#services)
+    - [Agents](#agents)
+    - [Templates](#templates)
+    - [Platforms](#platforms)
+  - [Open Source Projects](#open-source-projects)
+    - [Knowledge Management](#knowledge-management)
+    - [Other / Chatbots](#other--chatbots)
+  - [Learn](#learn)
+    - [Notebooks](#notebooks)
+    - [Videos Playlists](#videos-playlists)
+  - [Other LLM Frameworks](#other-llm-frameworks)
+  - [Complement to this list](#complement-to-this-list)
+  - [Unmaintained](#unmaintained)
+
+## LangChain Framework
+
+- [LangChain](https://github.com/hwchase17/langchain): the original 🐍 ![GitHub Repo stars](https://img.shields.io/github/stars/hwchase17/langchain?style=social)
+- [LangChain.js](https://github.com/hwchase17/langchainjs): the js brother ✨ ![GitHub Repo stars](https://img.shields.io/github/stars/hwchase17/langchainjs?style=social)
+- [Concepts](https://docs.langchain.com/docs/): Langchain concepts doc
+- [Twitter account](https://twitter.com/LangChainAI): follow to get fresh updates
+- [Youtube Channel](https://www.youtube.com/channel/UCC-lyoTfSrcJzA1ab3APAgw)
+- [Langchain Blog](https://blog.langchain.dev/): The Official Langchain blog
+- [LangServe](https://github.com/langchain-ai/langserve): LangServe helps developers deploy LangChain runnables and chains as a REST API. ![GitHub Repo stars](https://img.shields.io/github/stars/langchain-ai/langserve?style=social)
+
+## Ports to other languages
+
+List of non-official ports of LangChain to other languages.
+
+- [Langchain Go](https://github.com/tmc/langchaingo): Golang Langchain ![GitHub Repo stars](https://img.shields.io/github/stars/tmc/langchaingo?style=social)
+- [LangchainRb](https://github.com/andreibondarev/langchainrb): Ruby Langchain ![GitHub Repo stars](https://img.shields.io/github/stars/andreibondarev/langchainrb?style=social)
+- [LangChain4j](https://github.com/langchain4j/langchain4j): LangChain for Java ![GitHub Repo stars](https://img.shields.io/github/stars/langchain4j/langchain4j?style=social)
+- [LangChainDart](https://github.com/davidmigloz/langchain_dart): Build powerful LLM-based Dart/Flutter applications. ![GitHub Repo stars](https://img.shields.io/github/stars/davidmigloz/langchain_dart?style=social)
+- [Langchain-hs](https://github.com/tusharad/langchain-hs): Haskell implementation of Haskell. ![GitHub Repo stars](https://img.shields.io/github/stars/tusharad/langchain-hs?style=social)
+- [Langchain](https://github.com/brainlid/langchain): Elixir implementation of a LangChain ![GitHub Repo stars](https://img.shields.io/github/stars/brainlid/langchain?style=social)
+- [Langchain-rust](https://github.com/Abraxas-365/langchain-rust): LangChain for Rust ![GitHub Repo stars](https://img.shields.io/github/stars/Abraxas-365/langchain-rust?style=social)
+
+## Tools
+
+### Low-code
+
+- [Flowise](https://github.com/FlowiseAI/Flowise): Drag & drop UI to build your customized LLM flow using LangchainJS ![GitHub Repo stars](https://img.shields.io/github/stars/FlowiseAI/Flowise?style=social)
+- [Langflow](https://github.com/logspace-ai/langflow): LangFlow is a UI for LangChain ![GitHub Repo stars](https://img.shields.io/github/stars/logspace-ai/langflow?style=social)
+- [Flock](https://github.com/Onelevenvy/flock): Flock is a workflow-based low-code platform for rapidly building chatbots, RAG, and coordinating multi-agent teams![GitHub Repo stars](https://img.shields.io/github/stars/Onelevenvy/flock?style=social)
+  
+### Services
+
+- [GPTCache](https://github.com/zilliztech/GPTCache): A Library for Creating Semantic Cache for LLM Queries ![GitHub Repo stars](https://img.shields.io/github/stars/zilliztech/GPTCache?style=social)
+- [Gorilla](https://github.com/ShishirPatil/gorilla): An API store for LLMs ![GitHub Repo stars](https://img.shields.io/github/stars/ShishirPatil/gorilla?style=social)
+- [LlamaHub](https://github.com/emptycrown/llama-hub): a library of data loaders for LLMs made by the community ![GitHub Repo stars](https://img.shields.io/github/stars/emptycrown/llama-hub?style=social)
+- [Auto-evaluator](https://github.com/PineappleExpress808/auto-evaluator): a lightweight evaluation tool for question-answering using Langchain ![GitHub Repo stars](https://img.shields.io/github/stars/PineappleExpress808/auto-evaluator?style=social)
+- [Langchain visualizer](https://github.com/amosjyng/langchain-visualizer): visualization and debugging tool for LangChain workflows ![GitHub Repo stars](https://img.shields.io/github/stars/amosjyng/langchain-visualizer?style=social)
+- [LLM Strategy](https://github.com/BlackHC/llm-strategy): implementing the Strategy Pattern using LLMs ![GitHub Repo stars](https://img.shields.io/github/stars/BlackHC/llm-strategy?style=social)
+- [datasetGPT](https://github.com/radi-cho/datasetGPT): A command-line interface to generate textual and conversational datasets with LLMs. ![GitHub Repo stars](https://img.shields.io/github/stars/radi-cho/datasetGPT?style=social)
+- [Auto Evaluator](https://github.com/langchain-ai/auto-evaluator): Langchain auto evaluator ![GitHub Repo stars](https://img.shields.io/github/stars/langchain-ai/auto-evaluator?style=social)
+- [Jina](https://github.com/jina-ai/langchain-serve): Langchain Apps on Production with Jina ![GitHub Repo stars](https://img.shields.io/github/stars/jina-ai/langchain-serve?style=social)
+- [Dify](https://github.com/langgenius/dify): One API for plugins and datasets, one interface for prompt engineering and visual operation, all for creating powerful AI applications. ![GitHub Repo stars](https://img.shields.io/github/stars/langgenius/dify?style=social)
+- [Chainlit](https://github.com/Chainlit/chainlit): Build Python LLM apps in minutes ⚡️ ![GitHub Repo stars](https://img.shields.io/github/stars/Chainlit/chainlit?style=social)
+- [Langchain Decorators](https://github.com/ju-bezdek/langchain-decorators): a layer on the top of LangChain that provides syntactic sugar 🍭 for writing custom langchain prompts and chains ![GitHub Repo stars](https://img.shields.io/github/stars/ju-bezdek/langchain-decorators?style=social)
+- [AilingBot](https://github.com/ericzhang-cn/ailingbot): Quickly integrate applications built on Langchain into IM such as Slack, WeChat Work, Feishu, DingTalk.
+- [Llama2 Embedding Server](https://github.com/Dicklesworthstone/llama_embeddings_fastapi_service): Llama2 Embeddings FastAPI Service using LangChain ![GitHub Repo stars](https://img.shields.io/github/stars/Dicklesworthstone/llama_embeddings_fastapi_service?style=social)
+- [ChatAbstractions](https://github.com/andrewnguonly/ChatAbstractions): LangChain chat model abstractions for dynamic failover, load balancing, chaos engineering, and more! ![GitHub Repo stars](https://img.shields.io/github/stars/andrewnguonly/ChatAbstractions?style=social)
+- [MindSQL](https://github.com/Mindinventory/MindSQL) - A python package for Txt-to-SQL with self hosting functionalities and RESTful APIs compatible with proprietary as well as open source LLM.![GitHub Repo stars](https://img.shields.io/github/stars/mindinventory/mindsql?style=social)
+- [Llama-github](https://github.com/JetXu-LLM/llama-github): Llama-github is a python library which built with Langchain framework that helps you retrieve the most relevant code snippets, issues, and repository information from GitHub ![GitHub Repo stars](https://img.shields.io/github/stars/JetXu-LLM/llama-github?style=social)
+- [CopilotKit](https://github.com/CopilotKit/CopilotKit): A framework for building custom AI Copilots 🤖 in-app AI chatbots, in-app AI Agents, & AI-powered Textareas ![GitHub Repo stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=social)
+- [LangFair](https://github.com/cvs-health/langfair): LangFair is a Python library for conducting use-case-specific LLM bias and fairness assessments ![GitHub Repo stars](https://img.shields.io/github/stars/cvs-health/langfair?style=social)
+- [LangWatch](https://github.com/langwatch/langwatch): An Open Source tool for observing, evaluating and optimising your llm apps and prompts, which supports LangChain out of the box! ![GitHub Repo stars](https://img.shields.io/github/stars/langwatch/langwatch?style=social)
+- [Agentic Radar](https://github.com/splx-ai/agentic-radar) - Open-source CLI security scanner for agentic workflows. Scans your workflow’s source code, detects vulnerabilities, and generates an interactive visualization along with a detailed security report. ![GitHub Repo stars](https://img.shields.io/github/stars/splx-ai/agentic-radar?style=social)
+- [UQLM](https://github.com/cvs-health/uqlm): UQLM: Uncertainty Quantification for Language Models, is a Python library for LLM hallucination detection using state-of-the-art uncertainty quantification techniques ![GitHub Repo stars](https://img.shields.io/github/stars/cvs-health/uqlm?style=social)
+
+
+### Agents
+
+- [Private GPT](https://github.com/imartinez/privateGPT): Interact privately with your documents using the power of GPT, 100% privately, no data leaks ![GitHub Repo stars](https://img.shields.io/github/stars/imartinez/privateGPT?style=social)
+- [CollosalAI Chat](https://github.com/hpcaitech/ColossalAI/tree/main/applications/Chat): implement LLM with RLHF, powered by the Colossal-AI project ![GitHub Repo stars](https://img.shields.io/github/stars/hpcaitech/ColossalAI?style=social)
+- [CrewAI](https://github.com/joaomdmoura/crewai): Cutting-edge framework for orchestrating role-playing, autonomous AI agents. ![GitHub Repo stars](https://img.shields.io/github/stars/joaomdmoura/crewai?style=social)
+- [AgentGPT](https://github.com/reworkd/AgentGPT): AI Agents with Langchain & OpenAI (Vercel / Nextjs) ![GitHub Repo stars](https://img.shields.io/github/stars/reworkd/AgentGPT?style=social)
+- [Local GPT](https://github.com/PromtEngineer/localGPT): Inspired on Private GPT with the GPT4ALL model replaced with the Vicuna-7B model and using the InstructorEmbeddings instead of LlamaEmbeddings ![GitHub Repo stars](https://img.shields.io/github/stars/PromtEngineer/localGPT?style=social)
+- [GPT Researcher](https://github.com/assafelovic/gpt-researcher): GPT Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks. ![GitHub Repo stars](https://img.shields.io/github/stars/assafelovic/gpt-researcher?style=social)
+- [ThinkGPT](https://github.com/alaeddine-13/thinkgpt): Agent techniques to augment your LLM and push it beyond its limits ![GitHub Repo stars](https://img.shields.io/github/stars/alaeddine-13/thinkgpt?style=social)
+- [Camel-AutoGPT](https://github.com/SamurAIGPT/Camel-AutoGPT): role-playing approach for LLMs and auto-agents like BabyAGI & AutoGPT ![GitHub Repo stars](https://img.shields.io/github/stars/SamurAIGPT/Camel-AutoGPT?style=social)
+- [RasaGPT](https://github.com/paulpierre/RasaGPT): RasaGPT is the first headless LLM chatbot platform built on top of Rasa and Langchain. ![GitHub Repo stars](https://img.shields.io/github/stars/paulpierre/RasaGPT?style=social)
+- [SkyAGI](https://github.com/litanlitudan/skyagi): Emerging human-behavior simulation capability in LLM agents ![GitHub Repo stars](https://img.shields.io/github/stars/litanlitudan/skyagi?style=social)
+- [PyCodeAGI](https://github.com/chakkaradeep/pyCodeAGI): A small AGI experiment to generate a Python app given what app the user wants to build ![GitHub Repo stars](https://img.shields.io/github/stars/chakkaradeep/pyCodeAGI?style=social)
+- [BabyAGI UI](https://github.com/miurla/babyagi-ui): Make it easier to run and develop with babyagi in a web app, like a ChatGPT ![GitHub Repo stars](https://img.shields.io/github/stars/miurla/babyagi-ui?style=social)
+- [SuperAgent](https://github.com/homanp/superagent): Deploy LLM Agents to production ![GitHub Repo stars](https://img.shields.io/github/stars/homanp/superagent?style=social)
+- [Voyager](https://github.com/MineDojo/Voyager): An Open-Ended Embodied Agent with Large Language Models ![GitHub Repo stars](https://img.shields.io/github/stars/MineDojo/Voyager?style=social)
+- [ix](https://github.com/kreneskyp/ix): Autonomous GPT-4 agent platform ![GitHub Repo stars](https://img.shields.io/github/stars/kreneskyp/ix?style=social)
+- [DuetGPT](https://github.com/kristoferlund/duet-gpt): A conversational semi-autonomous developer assistant, AI pair programming without the copypasta. ![GitHub Repo stars](https://img.shields.io/github/stars/kristoferlund/duet-gpt?style=social)
+- [Multi-Modal LangChain agents in Production](https://github.com/steamship-packages/langchain-agent-production-starter): Deploy LangChain Agents and connect them to Telegram ![GitHub Repo stars](https://img.shields.io/github/stars/steamship-packages/langchain-agent-production-starter?style=social)
+- [DemoGPT](https://github.com/melih-unsal/DemoGPT): DemoGPT enables you to create quick demos by just using prompt. It applies ToT approach on Langchain documentation tree. ![GitHub Repo stars](https://img.shields.io/github/stars/melih-unsal/DemoGPT?style=social)
+- [SuperAGI](https://github.com/TransformerOptimus/SuperAGI): SuperAGI - A dev-first open source autonomous AI agent framework ![GitHub Repo stars](https://img.shields.io/github/stars/TransformerOptimus/SuperAGI?style=social)
+- [Autonomous HR Chatbot](https://github.com/stepanogil/autonomous-hr-chatbot): An autonomous agent that can answer HR related queries autonomously using the tools it has on hand ![GitHub Repo stars](https://img.shields.io/github/stars/stepanogil/autonomous-hr-chatbot?style=social)
+- [BlockAGI](https://github.com/blockpipe/blockagi): BlockAGI conducts iterative, domain-specific research, and outputs detailed narrative reports to showcase its findings ![GitHub Repo stars](https://img.shields.io/github/stars/blockpipe/blockagi?style=social)
+- [waggledance.ai](https://github.com/agi-merge/waggle-dance): An opinionated, concurrent system of AI Agents. It implements Plan-Validate-Solve with data and tools for general goal-solving. ![GitHub Repo stars](https://img.shields.io/github/stars/agi-merge/waggle-dance?style=social)
+
+
+### Templates
+
+- [AI](https://github.com/vercel-labs/ai): Vercel template to build AI-powered applications with React, Svelte, and Vue, first class support for LangChain ![GitHub Repo stars](https://img.shields.io/github/stars/vercel-labs/ai?style=social)
+- [create-t3-turbo-ai](https://github.com/zckly/create-t3-turbo-ai): t3 based, Langchain-friendly boilerplate for building type-safe, full-stack, LLM-powered web apps with Nextjs and Prisma ![GitHub Repo stars](https://img.shields.io/github/stars/zckly/create-t3-turbo-ai?style=social)
+- [LangChain.js LLM Template](https://github.com/Conner1115/LangChain.js-LLM-Template): LangChain LLM template that allows you to train your own custom AI LLM model. ![GitHub Repo stars](https://img.shields.io/github/stars/Conner1115/LangChain.js-LLM-Template?style=social)
+- [Streamlit Template](https://github.com/hwchase17/langchain-streamlit-template): template for how to deploy a LangChain on Streamlit ![GitHub Repo stars](https://img.shields.io/github/stars/hwchase17/langchain-streamlit-template?style=social)
+- [Codespaces Template](https://github.com/lostintangent/codespaces-langchain): a Codespaces template for getting up-and-running with LangChain in seconds! ![GitHub Repo stars](https://img.shields.io/github/stars/lostintangent/codespaces-langchain?style=social)
+- [Gradio Template](https://github.com/hwchase17/langchain-gradio-template): template for how to deploy a LangChain on Gradio ![GitHub Repo stars](https://img.shields.io/github/stars/hwchase17/langchain-gradio-template?style=social)
+- [AI Getting Started](https://github.com/a16z-infra/ai-getting-started): A Javascript AI getting started stack for weekend projects, including image/text models, vector stores, auth, and deployment configs ![GitHub Repo stars](https://img.shields.io/github/stars/a16z-infra/ai-getting-started?style=social)
+- [Embedchain](https://github.com/embedchain/embedchain): Framework to easily create LLM powered bots over any dataset. ![GitHub Repo stars](https://img.shields.io/github/stars/embedchain/embedchain?style=social)
+
+### Platforms
+
+- [Openllmetry](https://github.com/traceloop/openllmetry): Open-source observability for your LLM application, based on OpenTelemetry ![GitHub Repo stars](https://img.shields.io/github/stars/traceloop/openllmetry?style=social)
+
+
+## Open Source Projects
+
+### Knowledge Management
+
+- [Quiver](https://github.com/StanGirard/quiver): Dump your brain into your GenerativeAI Vault ![GitHub Repo stars](https://img.shields.io/github/stars/StanGirard/quiver?style=social)
+- [DocsGPT](https://github.com/arc53/docsgpt): GPT-powered chat for documentation search & assistance. ![GitHub Repo stars](https://img.shields.io/github/stars/arc53/docsgpt?style=social)
+- [Chaindesk](https://github.com/gmpetrov/databerry): The no-code platform for semantic search and documents retrieval ![GitHub Repo stars](https://img.shields.io/github/stars/gmpetrov/databerry?style=social)
+- [Knowledge GPT](https://github.com/mmz-001/knowledge_gpt): Accurate answers and instant citations for your documents. ![GitHub Repo stars](https://img.shields.io/github/stars/mmz-001/knowledge_gpt?style=social)
+- [Knowledge](https://github.com/KnowledgeCanvas/knowledge): Knowledge is a tool for saving, searching, accessing, and exploring all of your favorite websites, documents and files. ![GitHub Repo stars](https://img.shields.io/github/stars/KnowledgeCanvas/knowledge?style=social)
+- [Anything LLM](https://github.com/Mintplex-Labs/anything-llm): A full-stack application that turns any documents into an intelligent chatbot with a sleek UI and easier way to manage your workspaces. ![GitHub Repo stars](https://img.shields.io/github/stars/Mintplex-Labs/anything-llm?style=social)
+- [DocNavigator](https://github.com/vgulerianb/DocNavigator): AI-powered chatbot builder that is designed to improve the user experience on product documentation/support websites ![GitHub Repo stars](https://img.shields.io/github/stars/vgulerianb/DocNavigator?style=social)
+- [ChatFiles](https://github.com/guangzhengli/ChatFiles): Upload your document and then chat with it. Powered by GPT / Embedding / TS / NextJS. ![GitHub Repo stars](https://img.shields.io/github/stars/guangzhengli/ChatFiles?style=social)
+- [DataChad](https://github.com/gustavz/DataChad): A streamlit app that lets you chat with any data source. Supporting both OpenAI and local mode with GPT4All. ![GitHub Repo stars](https://img.shields.io/github/stars/gustavz/DataChad?style=social)
+- [Second Brain AI Agent](https://github.com/flepied/second-brain-agent): A streamlit app dialog with your second brain notes using OpenAI and ChromaDB locally. ![GitHub Repo stars](https://img.shields.io/github/stars/flepied/second-brain-agent?style=social)
+- [examor](https://github.com/codeacme17/examor): A website application that allows you to take exams based on your knowledge notes. Let you really remember what you have learned and written. ![GitHub Repo stars](https://img.shields.io/github/stars/codeacme17/examor?style=social)
+- [Repochat](https://github.com/pnkvalavala/repochat): Chatbot assistant enabling GitHub repository interaction using LLMs with Retrieval Augmented Generation ![GitHub Repo stars](https://img.shields.io/github/stars/pnkvalavala/repochat?style=social)
+- [SolidGPT](https://github.com/AI-Citizen/SolidGPT): Chat everything with your code repository, ask repository level code questions, and discuss your requirements ![GitHub Repo stars](https://img.shields.io/github/stars/AI-Citizen/SolidGPT?style=social)
+- [Minima](https://github.com/dmayboroda/minima): Chat with local documents, connect local environment to ChatGPT or Claude ![GitHub Repo stars](https://img.shields.io/github/stars/dmayboroda/minima?style=social)
+
+### Other / Chatbots
+
+- [DB GPT](https://github.com/csunny/DB-GPT): Interact your data and environment using the local GPT, no data leaks, 100% privately, 100% security ![GitHub Repo stars](https://img.shields.io/github/stars/csunny/DB-GPT?style=social)
+- [AudioGPT](https://github.com/AIGC-Audio/AudioGPT): Understanding and Generating Speech, Music, Sound, and Talking Head ![GitHub Repo stars](https://img.shields.io/github/stars/AIGC-Audio/AudioGPT?style=social)
+- [Paper QA](https://github.com/whitead/paper-qa): LLM Chain for answering questions from documents with citations ![GitHub Repo stars](https://img.shields.io/github/stars/whitead/paper-qa?style=social)
+- [Chat Langchain](https://github.com/hwchase17/chat-langchain): locally hosted chatbot specifically focused on question answering over the LangChain documentation ![GitHub Repo stars](https://img.shields.io/github/stars/hwchase17/chat-langchain?style=social)
+- [Langchain Chat](https://github.com/zahidkhawaja/langchain-chat-nextjs): another Next.js frontend for LangChain Chat. ![GitHub Repo stars](https://img.shields.io/github/stars/zahidkhawaja/langchain-chat-nextjs?style=social)
+- [Book GPT](https://github.com/fraserxu/book-gpt): drop a book, start asking question. ![GitHub Repo stars](https://img.shields.io/github/stars/fraserxu/book-gpt?style=social)
+- [Doc Search](https://github.com/namuan/dr-doc-search): converse with book - Built with GPT-3 ![GitHub Repo stars](https://img.shields.io/github/stars/namuan/dr-doc-search?style=social)
+- [Fact Checker](https://github.com/jagilley/fact-checker): fact-checking LLM outputs with langchain ![GitHub Repo stars](https://img.shields.io/github/stars/jagilley/fact-checker?style=social)
+- [MM ReAct](https://github.com/microsoft/MM-REACT): Multi Modal ReAct Design
+- [QABot](https://github.com/hardbyte/qabot): Query local or remote files or databases with natural language queries powered by langchain and openai ![GitHub Repo stars](https://img.shields.io/github/stars/hardbyte/qabot?style=social)
+- [FlowGPT](https://github.com/nilooy/flowgpt): Generate diagram with AI ![GitHub Repo stars](https://img.shields.io/github/stars/nilooy/flowgpt?style=social)
+- [langchain-text-summarizer](https://github.com/alphasecio/langchain-text-summarizer): A sample streamlit application summarizing text using LangChain ![GitHub Repo stars](https://img.shields.io/github/stars/alphasecio/langchain-text-summarizer?style=social)
+- [Langchain Chat Websocket](https://github.com/pors/langchain-chat-websockets): About LangChain LLM chat with streaming response over websockets ![GitHub Repo stars](https://img.shields.io/github/stars/pors/langchain-chat-websockets?style=social)
+- [langchain_yt_tools](https://github.com/venuv/langchain_yt_tools): Langchain tools to search/extract/transcribe text transcripts of Youtube videos ![GitHub Repo stars](https://img.shields.io/github/stars/venuv/langchain_yt_tools?style=social)
+- [SmartPilot](https://github.com/jaredkirby/SmartPilot): A Python program leveraging OpenAI's language models to generate, analyze, and select the best answer to a given question ![GitHub Repo stars](https://img.shields.io/github/stars/jaredkirby/SmartPilot?style=social)
+- [ThoughtSource⚡](https://github.com/OpenBioLink/ThoughtSource): A framework for the science of machine thinking ![GitHub Repo stars](https://img.shields.io/github/stars/OpenBioLink/ThoughtSource?style=social)
+- [ChatGPT Langchain](https://huggingface.co/spaces/JavaFXpert/Chat-GPT-LangChain): ChatGPT clone using langchain on Huggingface
+- [Chat Math Techniques](https://huggingface.co/spaces/JavaFXpert/gpt-math-techniques): langchain chat with math techniques on Huggingface
+- [Notion QA](https://github.com/hwchase17/notion-qa): Notion Question-Answering Bot ![GitHub Repo stars](https://img.shields.io/github/stars/hwchase17/notion-qa?style=social)
+- [QNimGPT](https://huggingface.co/spaces/rituthombre/QNim): Play Nim against an IBM Quantum Computer simulator or OpenAI GPT-3.5
+- [ChatPDF](https://github.com/akshata29/chatpdf): ChatGPT + Enterprise data with Azure OpenAI ![GitHub Repo stars](https://img.shields.io/github/stars/akshata29/chatpdf?style=social)
+- [Chat with Scanned Documents](https://github.com/tony-xlh/Chat-with-Scanned-Documents): A demo chatting with documents scanned with Dynamic Web TWAIN.
+- [snowChat ❄️](https://github.com/kaarthik108/snowChat): Chat with you're snowflake database ![GitHub Repo stars](https://img.shields.io/github/stars/kaarthik108/snowChat?style=social)
+- [TutorGPT](https://github.com/plastic-labs/tutor-gpt): Dynamic few-shot metaprompting for the task of tutoring. ![GitHub Repo stars](https://img.shields.io/github/stars/plastic-labs/tutor-gpt?style=social)
+- [Cheshire Cat](https://github.com/cheshire-cat-ai/core): Custom AGI boT with ready-to-use chat integration and plugins development platform. ![GitHub Repo stars](https://img.shields.io/github/stars/cheshire-cat-ai/core?style=social)
+- [Dialoqbase](https://github.com/n4ze3m/dialoqbase): web application that allows you to create custom chatbots with your own knowledge base ![GitHub Repo stars](https://img.shields.io/github/stars/n4ze3m/dialoqbase?style=social)
+- [CSV-AI 🧠](https://python.langchain.com/en/latest/modules/indexes/document_loaders/examples/snowflake.html): CSV-AI is the ultimate app powered by LangChain that allows you to unlock hidden insights in your CSV files.
+- [MindGeniusAI](https://github.com/xianjianlf2/MindGeniusAI): Auto generate MindMap with ChatGPT ![GitHub Repo stars](https://img.shields.io/github/stars/xianjianlf2/MindGeniusAI?style=social)
+- [Robby-Chatbot](https://github.com/yvann-hub/Robby-chatbot): AI chatbot 🤖 for chat with CSV, PDF, TXT files 📄 and YTB videos 🎥 | using Langchain🦜 | OpenAI | Streamlit ⚡.
+- [AI Chatbot](https://github.com/vercel-labs/ai-chatbot): A full-featured, hackable Next.js AI chatbot built by Vercel Labs ![GitHub Repo stars](https://img.shields.io/github/stars/vercel-labs/ai-chatbot?style=social)
+- [Instrukt](https://github.com/blob42/Instrukt): A fully-fledged AI environment in the terminal. Build, test and instruct agents. ![GitHub Repo stars](https://img.shields.io/github/stars/blob42/Instrukt?style=social)
+- [OpenChat](https://github.com/openchatai/OpenChat/): LLMs custom-chatbots console ⚡. ![GitHub Repo stars](https://img.shields.io/github/stars/openchatai/OpenChat?style=social)
+- [GPT Migrate](https://github.com/0xpayne/gpt-migrate): Easily migrate your codebase from one framework or language to another.
+- [Code Interpreter API](https://github.com/shroominic/codeinterpreter-api): About Open source implementation of the ChatGPT Code Interpreter ![GitHub Repo stars](https://img.shields.io/github/stars/shroominic/codeinterpreter-api?style=social)
+- [Autonomous HR Chatbot](https://github.com/stepanogil/autonomous-hr-chatbot) An autonomous HR agent that can answer user queries using tools ![GitHub Repo stars](https://img.shields.io/github/stars/stepanogil/autonomous-hr-chatbot?style=social)
+- [Lobe Chat](https://github.com/lobehub/lobe-chat) An open-source, extensible (Function Calling), high-performance chatbot framework ![GitHub Repo stars](https://img.shields.io/github/stars/lobehub/lobe-chat?style=social)
+- [Funcchain](https://github.com/shroominic/funcchain): write prompts, pythonic ![GitHub Repo stars](https://img.shields.io/github/stars/shroominic/funcchain?style=social)
+- [PersonalityChatbot](https://github.com/btrcm00/chatbot-with-langchain): Langchain chatbot for chat with personality using Langchain🦜 | LangSmith | MongoDB. ![GitHub Repo stars](https://img.shields.io/github/stars/btrcm00/chatbot-with-langchain?style=social)
+- [XAgent](https://github.com/OpenBMB/XAgent): An Autonomous LLM Agent for Complex Task Solving ![GitHub Repo stars](https://img.shields.io/github/stars/OpenBMB/XAgent?style=social)
+- [MemFree](https://github.com/memfreeme/memfree) - Open Source Hybrid AI Search Engine, Instantly Get Accurate Answers from the Internet, Bookmarks, Notes, and Docs. Support One-Click Deployment. ![GitHub Repo stars](https://img.shields.io/github/stars/memfreeme/memfree?style=social)
+
+## Learn
+
+### Notebooks
+
+- [Langchain Tutorials](https://github.com/gkamradt/langchain-tutorials): overview and tutorial of the LangChain Library ![GitHub Repo stars](https://img.shields.io/github/stars/gkamradt/langchain-tutorials?style=social)
+- [LangChain Chinese Getting Started Guide](https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide): Chinese LangChain Tutorial for Beginners ![GitHub Repo stars](https://img.shields.io/github/stars/liaokongVFX/LangChain-Chinese-Getting-Started-Guide?style=social)
+- [Flan5 LLM](https://colab.research.google.com/drive/1AVh9dOsG9DKzfK7gOFrJuitPIcLPqlbO?usp=sharing): PDF QA using LangChain for chain of thought and multi-task instructions, Flan5 on HuggingFace
+- [LangChain Handbook](https://github.com/pinecone-io/examples/tree/master/generation/langchain/handbook): Pinecone / James Briggs' LangChain handbook
+- [Query the YouTube video transcripts](https://colab.research.google.com/drive/1sKSTjt9cPstl_WMZ86JsgEqFG-aSAwkn?usp=sharing): Query the YouTube video transcripts, returning timestamps as sources to legitimize the answers
+- [llm-lobbyist](https://github.com/JohnNay/llm-lobbyist): Large Language Models as Corporate Lobbyists
+- [Langchain Semantic Search](https://github.com/venuv/langchain_semantic_search): Search and indexing your own Google Drive Files using GPT3, LangChain, and Python
+- [GPT Political Compass](https://colab.research.google.com/drive/1xt2IsFPGYMEQdoJFNgWNAjWGxa60VXdV)
+- [llm-grovers-search-party](https://github.com/JavaFXpert/llm-grovers-search-party): Leveraging Qiskit, OpenAI and LangChain to demonstrate Grover's algorithm
+- [TextWorld ReAct Agent](https://colab.research.google.com/drive/19WTIWC3prw5LDMHmRMvqNV2loD9FHls6?usp=sharing)
+- [LangChain <> Wolfram Alpha](https://colab.research.google.com/drive/1AAyEdTz-Z6ShKvewbt1ZHUICqak0MiwR?usp=sharing)
+- [BYO Knowledge Graph](https://github.com/prof-frink-lab/slangchain/blob/main/docs/modules/knowledge_graph/examples/byo_knowledge_graph.ipynb)
+- [Large Language Models Course](https://github.com/peremartra/Large-Language-Model-Notebooks-Course) ![GitHub Repo stars](https://img.shields.io/github/stars/peremartra/Large-Language-Model-Notebooks-Course?style=social)
+
+### Videos Playlists
+
+- [LangChain Series by Sam Witteveen](https://www.youtube.com/watch?v=J_0qvRt4LNk&list=PL8motc6AQftk1Bs42EW45kwYbyJ4jOdiZ)
+- [LangChain Tutorials Playlist](https://www.youtube.com/playlist?list=PL611FKPtL866MnlDPHvI3KwVGqCB-QJAx)
+- [LangChain James Briggs' Playlist](https://www.youtube.com/watch?v=nE2skSRWTTs&list=PLIUOU7oqGTLieV9uTIFMm6_4PXg-hlN6F)
+- [Greg Kamradt Playlist](https://www.youtube.com/watch?v=_v_fgW2SkkQ&list=PLqZXAkvF1bPNQER9mLmDbntNfSpzdDIU5)
+
+## Other LLM Frameworks
+
+- [Transformers Agents](https://huggingface.co/docs/transformers/transformers_agents): Provides a natural language API on top of transformers
+- [LlamaIndex](https://github.com/jerryjliu/llama_index): provides a central interface to connect your LLM's with external data. ![GitHub Repo stars](https://img.shields.io/github/stars/jerryjliu/llama_index?style=social)
+- [Botpress](https://github.com/botpress/botpress): The building blocks for building chatbots ![GitHub Repo stars](https://img.shields.io/github/stars/botpress/botpress?style=social)
+- [Haystack](https://github.com/deepset-ai/haystack): NLP framework to interact with your data using Transformer models and LLMs ![GitHub Repo stars](https://img.shields.io/github/stars/deepset-ai/haystack?style=social)
+- [Semantic Kernel](https://github.com/microsoft/semantic-kernel): Microsoft C# SDK to integrate cutting-edge LLM technology quickly and easily into your apps ![GitHub Repo stars](https://img.shields.io/github/stars/microsoft/semantic-kernel?style=social)
+- [Promptify](https://github.com/promptslab/Promptify): Prompt Engineering | Use GPT or other prompt based models to get structured output. ![GitHub Repo stars](https://img.shields.io/github/stars/promptslab/Promptify?style=social)
+- [PromptSource](https://github.com/bigscience-workshop/promptsource): About Toolkit for creating, sharing and using natural language prompts. ![GitHub Repo stars](https://img.shields.io/github/stars/bigscience-workshop/promptsource?style=social)
+- [Agent-LLM](https://github.com/Josh-XT/Agent-LLM): An Artificial Intelligence Automation Platform. ![GitHub Repo stars](https://img.shields.io/github/stars/Josh-XT/Agent-LLM?style=social)
+- [LLM Agents](https://github.com/mpaepper/llm_agents): Build agents which are controlled by LLMs ![GitHub Repo stars](https://img.shields.io/github/stars/mpaepper/llm_agents?style=social)
+- [MiniChain](https://github.com/srush/MiniChain): A tiny library for coding with large language models. ![GitHub Repo stars](https://img.shields.io/github/stars/srush/MiniChain?style=social)
+- [Griptape](https://github.com/griptape-ai/griptape): Python framework for AI workflows and pipelines with chain of thought reasoning, external tools, and memory. ![GitHub Repo stars](https://img.shields.io/github/stars/griptape-ai/griptape?style=social)
+- [llm-chain](https://github.com/sobelio/llm-chain): is a powerful rust crate for building chains in LLMs allowing you to summarise text and complete complex tasks. ![GitHub Repo stars](https://img.shields.io/github/stars/sobelio/llm-chain?style=social)
+- [OpenLM](https://github.com/r2d4/openlm): a drop-in OpenAI-compatible library that can call LLMs from any other hosted inference API. Also [Typescript](https://github.com/r2d4/llm.ts) ![GitHub Repo stars](https://img.shields.io/github/stars/r2d4/openlm?style=social)
+- [Dust](https://github.com/dust-tt/dust): Design and Deploy Large Language Model Apps ![GitHub Repo stars](https://img.shields.io/github/stars/dust-tt/dust?style=social)
+- [e2b](https://github.com/e2b-dev/e2b): Open-source platform for building & deploying virtual developers’ agents
+- [SuperAGI](https://github.com/TransformerOptimus/SuperAGI): A dev-first open source autonomous AI agent framework. ![GitHub Repo stars](https://img.shields.io/github/stars/TransformerOptimus/SuperAGI?style=social)
+- [SmartGPT](https://github.com/Cormanz/smartgpt): A program that provides LLMs with the ability to complete complex tasks using plugins. ![GitHub Repo stars](https://img.shields.io/github/stars/Cormanz/smartgpt?style=social)
+- [TermGPT](https://github.com/Sentdex/TermGPT): Giving LLMs like GPT-4 the ability to plan and execute terminal commands ![GitHub Repo stars](https://img.shields.io/github/stars/Sentdex/TermGPT?style=social)
+- [ReLLM](https://github.com/r2d4/rellm): Regular Expressions for Language Model Completions. ![GitHub Repo stars](https://img.shields.io/github/stars/r2d4/rellm?style=social)
+- [OpenDAN](https://github.com/fiatrete/OpenDAN-Personal-AI-OS): open source Personal AI OS , which consolidates various AI modules in one place for your personal use. ![GitHub Repo stars](https://img.shields.io/github/stars/fiatrete/OpenDAN-Personal-AI-OS?style=social)
+- [OpenLLM](https://github.com/bentoml/OpenLLM): An open platform for operating large language models (LLMs) in production. Fine-tune, serve, deploy, and monitor any LLMs with ease using OpenLLM. ![GitHub Repo stars](https://img.shields.io/github/stars/bentoml/OpenLLM?style=social)
+- [FlagAI](https://github.com/FlagAI-Open/FlagAI): FlagAI (Fast LArge-scale General AI models) is a fast, easy-to-use and extensible toolkit for large-scale model. ![GitHub Repo stars](https://img.shields.io/github/stars/FlagAI-Open/FlagAI?style=social)
+- [AI.JSX](https://github.com/fixie-ai/ai-jsx): The AI Application Framework for Javascript ![GitHub Repo stars](https://img.shields.io/github/stars/fixie-ai/ai-jsx?style=social)
+- [Outlines](https://github.com/normal-computing/outlines): Generative Model Programming (Python) ![GitHub Repo stars](https://img.shields.io/github/stars/normal-computing/outlines?style=social)
+- [AI Utils](https://github.com/lgrammel/ai-utils.js): TypeScript-first library for building AI apps, chatbots, and agents. ![GitHub Repo stars](https://img.shields.io/github/stars/lgrammel/ai-utils.js?style=social)
+- [MetaGPT](https://github.com/geekan/MetaGPT): The Multi-Agent Meta Programming Framework: Given one line Requirement, return PRD, Design, Tasks, Repo and CI ![GitHub Repo stars](https://img.shields.io/github/stars/geekan/MetaGPT?style=social)
+- [Hyv](https://github.com/failfa-st/hyv): Probably the easiest way to use any AI Model in Node.js and create complex interactions with ease. ![GitHub Repo stars](https://img.shields.io/github/stars/failfa-st/hyv?style=social)
+- [Autochain](https://github.com/Forethought-Technologies/AutoChain): Build lightweight, extensible, and testable LLM Agents with AutoChain. ![GitHub Repo stars](https://img.shields.io/github/stars/Forethought-Technologies/AutoChain?style=social)
+- [TypeChat](https://github.com/microsoft/TypeChat): TypeChat is a library that makes it easy to build natural language interfaces using types. ![GitHub Repo stars](https://img.shields.io/github/stars/microsoft/TypeChat?style=social)
+- [Marvin](https://github.com/PrefectHQ/marvin): ✨ Build AI interfaces that spark joy ![GitHub Repo stars](https://img.shields.io/github/stars/PrefectHQ/marvin?style=social)
+- [LMQL](https://github.com/eth-sri/lmql): A programming language for large language models. ![GitHub Repo stars](https://img.shields.io/github/stars/eth-sri/lmql?style=social)
+- [LLMFlow](https://github.com/stoyan-stoyanov/llmflows): Simple, Explicit and Transparent LLM Apps ![GitHub Repo stars](https://img.shields.io/github/stars/stoyan-stoyanov/llmflows?style=social)
+- [Ax](https://github.com/axilla-io/ax): A comprehensive AI framework for TypeScript ![GitHub Repo stars](https://img.shields.io/github/stars/axilla-io/ax?style=social)
+- [TextAI](https://github.com/neuml/txtai): 💡 All-in-one open-source embeddings database for semantic search, LLM orchestration and language model workflows. ![GitHub Repo stars](https://img.shields.io/github/stars/neuml/txtai?style=social)
+- [AgentFlow](https://github.com/simonmesmith/agentflow): About Complex LLM Workflows from Simple JSON. ![GitHub Repo stars](https://img.shields.io/github/stars/simonmesmith/agentflow?style=social)
+- [Outlines](https://github.com/normal-computing/outlines): Fast and reliable neural text generation. ![GitHub Repo stars](https://img.shields.io/github/stars/normal-computing/outlines?style=social)
+- [SimpleAIChat](https://github.com/minimaxir/simpleaichat): Python package for easily interfacing with chat apps, with robust features and minimal code complexity. ![GitHub Repo stars](https://img.shields.io/github/stars/minimaxir/simpleaichat?style=social)
+- [LLFn](https://github.com/orgexyz/LLFn): A light-weight framework for creating applications using LLMs ![GitHub Repo stars](https://img.shields.io/github/stars/orgexyz/LLFn?style=social)
+- [LLMStack](https://github.com/trypromptly/LLMStack): No code platform for building LLM-powered applications with custom data. ![GitHub Repo stars](https://img.shields.io/github/stars/trypromptly/LLMStack?style=social)
+- [Lagent](https://github.com/InternLM/lagent): A lightweight framework for building LLM-based agents ![GitHub Repo stars](https://img.shields.io/github/stars/InternLM/lagent?style=social)
+- [Embedbase](https://github.com/different-ai/embedbase): The native Software 3.0 stack for building AI-powered applications. ![GitHub Repo stars](https://img.shields.io/github/stars/different-ai/embedbase?style=social)
+- [Rivet](https://github.com/Ironclad/rivet): An IDE for creating complex AI agents and prompt chaining, and embedding it in your application. ![GitHub Repo stars](https://img.shields.io/github/stars/Ironclad/rivet?style=social)
+- [Promptfoo](https://github.com/promptfoo/promptfoo): Test your prompts. Evaluate and compare LLM outputs, catch regressions, and improve prompt quality. ![GitHub Repo stars](https://img.shields.io/github/stars/promptfoo/promptfoo?style=social)
+- [RestGPT](https://github.com/Yifan-Song793/RestGPT): An LLM-based autonomous agent controlling real-world applications via RESTful APIs ![GitHub Repo stars](https://img.shields.io/github/stars/Yifan-Song793/RestGPT?style=social)
+- [LangStream](https://github.com/LangStream/langstream): Framework for building and running event-driven LLM applications using no-code and Python (including LangChain-based) agents. ![GitHub Repo stars](https://img.shields.io/github/stars/LangStream/langstream?style=social)
+- [Magentic](https://github.com/jackmpcollins/magentic): Seamlessly integrate LLMs as Python functions ![GitHub Repo stars](https://img.shields.io/github/stars/jackmpcollins/magentic?style=social)
+- [Autogen](https://github.com/microsoft/autogen): Enable Next-Gen Large Language Model Applications.
+- [AgentVerse](https://github.com/openbmb/agentverse) Provides a flexible framework that simplifies the process of building custom multi-agent environments for LLMs ![GitHub Repo stars](https://img.shields.io/github/stars/openbmb/agentverse?style=social)
+- [Flappy](https://github.com/pleisto/flappy): Production-Ready LLM Agent SDK for Every Developer ![Github Repo stars](https://img.shields.io/github/stars/pleisto/flappy.svg?style=social)
+- [MemGPT](https://github.com/cpacker/MemGPT): Teaching LLMs memory management for unbounded context ![GitHub Repo stars](https://img.shields.io/github/stars/cpacker/MemGPT?style=social)
+- [Agentlabs](https://github.com/agentlabs-inc/agentlabs): Universal AI Agent Frontend. Build your backend we handle the rest. ![GitHub Repo stars](https://img.shields.io/github/stars/agentlabs-inc/agentlabs?style=social)
+- [axflow](https://github.com/axflow/axflow): The TypeScript framework for AI development ![GitHub Repo stars](https://img.shields.io/github/stars/axflow/axflow?style=social)
+- [bondai](https://github.com/krohling/bondai): AI-powered assistant with a lightweight, versatile API for seamless integration into your own applications ![GitHub Repo stars](https://img.shields.io/github/stars/krohling/bondai?style=social)
+- [Chidori](https://github.com/ThousandBirdsInc/chidori): A reactive runtime for building durable AI agents ![GitHub Repo stars](https://img.shields.io/github/stars/ThousandBirdsInc/chidori?style=social)
+- [Langroid](https://github.com/langroid/langroid): an intuitive, lightweight, extensible and principled Python framework to easily build LLM-powered applications. ![GitHub Repo stars](https://img.shields.io/github/stars/langroid/langroid?style=social)
+- [Langstream](https://github.com/rogeriochaves/langstream): Build robust LLM applications with true composability 🔗 ![GitHub Repo stars](https://img.shields.io/github/stars/rogeriochaves/langstream?style=social)
+- [Agency](https://github.com/neurocult/agency): 🕵️‍♂️ Library designed for developers eager to explore the potential of Large Language Models (LLMs) and other generative AI through a clean, effective, and Go-idiomatic approach ![GitHub Repo stars](https://img.shields.io/github/stars/neurocult/agency?style=social)
+- [TaskWeaver](https://github.com/microsoft/TaskWeaver): A code-first agent framework for seamlessly planning and executing data analytics tasks. ![GitHub Repo stars](https://img.shields.io/github/stars/microsoft/TaskWeaver?style=social)
+- [MicroAgent](https://github.com/aymenfurter/microagents): Agents Capable of Self-Editing Their Prompts / Python Code ![GitHub Repo stars](https://img.shields.io/github/stars/aymenfurter/microagents?style=social)
+- [Casibase](https://github.com/casibase/casibase): Open-source AI LangChain-like RAG (Retrieval-Augmented Generation) knowledge database with web UI and Enterprise SSO⚡️, supports OpenAI, Azure, LLaMA, Google Gemini, HuggingFace, Claude, Grok, etc ![GitHub Repo stars](https://img.shields.io/github/stars/casibase/casibase?style=social)
+- [Fructose](https://github.com/bananaml/fructose): Fructose is a python package to create a dependable, strongly-typed interface around an LLM call. ![GitHub Repo stars](https://img.shields.io/github/stars/bananaml/fructose?style=social)
+- [R2R](https://github.com/SciPhi-AI/R2R): A framework for rapid development and deployment of production-ready RAG systems ![GitHub Repo stars](https://img.shields.io/github/stars/SciPhi-AI/R2R?style=social)
+- [uAgents](https://github.com/fetchai/uAgents): A fast and lightweight framework for creating decentralized agents with ease. ![GitHub Repo stars](https://img.shields.io/github/stars/fetchai/uAgents?style=social)
+- [Codel](https://github.com/semanser/codel): ✨ Fully autonomous AI Agent that can perform complicated tasks and projects using terminal, browser, and editor. ![GitHub Repo stars](https://img.shields.io/github/stars/semanser/codel?style=social)
+- [LLocalSearch](https://github.com/nilsherzig/LLocalSearch): LLocalSearch is a completely locally running search aggregator using LLM Agents. The user can ask a question and the system will use a chain of LLMs to find the answer. The user can see the progress of the agents and the final answer. No OpenAI or Google API keys are needed. ![GitHub Repo stars](https://img.shields.io/github/stars/nilsherzig/LLocalSearch?style=social)
+- [Plandex](https://github.com/plandex-ai/plandex): An AI coding engine for complex tasks ![GitHub Repo stars](https://img.shields.io/github/stars/plandex-ai/plandex?style=social)
+- [Maestro](https://github.com/Doriandarko/maestro): A framework for Claude Opus to intelligently orchestrate subagents. ![GitHub Repo stars](https://img.shields.io/github/stars/Doriandarko/maestro?style=social)
+- [GPT Pilot](https://github.com/Pythagora-io/gpt-pilot): GPT Pilot is the core technology for the Pythagora VS Code extension that aims to provide the first real AI developer companion. ![GitHub Repo stars](https://img.shields.io/github/stars/Pythagora-io/gpt-pilot?style=social)
+- [SWE Agent](https://github.com/princeton-nlp/swe-agent): SWE-agent takes a GitHub issue and tries to automatically fix it, using GPT-4, or your LM of choice. ![GitHub Repo stars](https://img.shields.io/github/stars/princeton-nlp/swe-agent?style=social)
+- [Gateway](https://github.com/Portkey-AI/gateway): A Blazing Fast AI Gateway. Route to 100+ LLMs with 1 fast & friendly API. ![GitHub Repo stars](https://img.shields.io/github/stars/Portkey-AI/gateway?style=social)
+- [AgentRun](https://github.com/Jonathan-Adly/AgentRun): The easiest, and fastest way to run AI-generated Python code safely ![GitHub Repo stars](https://img.shields.io/github/stars/Jonathan-Adly/AgentRun?style=social)
+- [LLama Cpp Agent](https://github.com/Maximilian-Winter/llama-cpp-agent): The llama-cpp-agent framework is a tool designed for easy interaction with Large Language Models ![GitHub Repo stars](https://img.shields.io/github/stars/Maximilian-Winter/llama-cpp-agent?style=social)
+- [FinRobot](https://github.com/AI4Finance-Foundation/FinRobot): An Open-Source AI Agent Platform for Financial Applications using LLMs ![GitHub Repo stars](https://img.shields.io/github/stars/AI4Finance-Foundation/FinRobot?style=social)
+- [Groq Ruby](https://github.com/drnic/groq-ruby): Groq Cloud runs LLM models fast and cheap. This is a convenience client library for Ruby. ![GitHub Repo stars](https://img.shields.io/github/stars/drnic/groq-ruby?style=social)
+- [AgentScope](https://github.com/modelscope/agentscope): Start building LLM-empowered multi-agent applications in an easier way. ![GitHub Repo stars](https://img.shields.io/github/stars/modelscope/agentscope?style=social)
+- [Memary](https://github.com/kingjulio8238/memary): Longterm Memory for Autonomous Agents. ![GitHub Repo stars](https://img.shields.io/github/stars/kingjulio8238/memary?style=social)
+- [Llmware](https://github.com/llmware-ai/llmware): Providing enterprise-grade LLM-based development framework, tools, and fine-tuned models. ![GitHub Repo stars](https://img.shields.io/github/stars/llmware-ai/llmware?style=social)
+- [Pipecat](https://github.com/pipecat-ai/pipecat): Open Source framework for voice and multimodal conversational AI. ![GitHub Repo stars](https://img.shields.io/github/stars/pipecat-ai/pipecat?style=social)
+- [Phidata](https://github.com/phidatahq/phidata): Build AI Assistants with memory, knowledge and tools. ![GitHub Repo stars](https://img.shields.io/github/stars/phidatahq/phidata?style=social)
+- [Rigging](https://github.com/dreadnode/rigging): Lightweight LLM Interaction Framework (rust) ![GitHub Repo stars](https://img.shields.io/github/stars/dreadnode/rigging?style=social)
+- [Vision agent](https://github.com/landing-ai/vision-agent): Vision Agent is a library that helps you utilize agent frameworks to generate code to solve your vision task. ![GitHub Repo stars](https://img.shields.io/github/stars/landing-ai/vision-agent?style=social)
+- [llama-agents](https://github.com/run-llama/llama-agents): llama-agents is an async-first framework for building, iterating, and productionizing multi-agent systems, including multi-agent communication, distributed tool execution, human-in-the-loop, and more ![GitHub Repo stars](https://img.shields.io/github/stars/run-llama/llama-agents?style=social)
+- [Claude Engineer](https://github.com/Doriandarko/claude-engineer): Claude Engineer is an interactive command-line interface (CLI) that leverages the power of Anthropic's Claude-3.5-Sonnet model to assist with software development tasks. ![GitHub Repo stars](https://img.shields.io/github/stars/Doriandarko/claude-engineer?style=social)
+- [AI Scientist](https://github.com/SakanaAI/AI-Scientist): The AI Scientist: Towards Fully Automated Open-Ended Scientific ![GitHub Repo stars](https://img.shields.io/github/stars/SakanaAI/AI-Scientist?style=social)
+- [DSPy](https://github.com/stanfordnlp/dspy): The framework for programming—not prompting—foundation models ![GitHub Repo stars](https://img.shields.io/github/stars/stanfordnlp/dspy?style=social)
+- [Eino](https://github.com/cloudwego/eino): Eino provides a Golang AI application development framework with various component integrations and the ability to orchestrate Chains and Graphs similar to LangChain and LangGraph. ![GitHub Repo stars](https://img.shields.io/github/stars/cloudwego/eino?style=social)
+- [TensorZero](https://github.com/tensorzero/tensorzero): An open-source framework for building production-grade LLM applications. It unifies an LLM gateway, observability, optimization, evaluations, and experimentation. ![GitHub Repo stars](https://img.shields.io/github/stars/tensorzero/tensorzero?style=social)
+- [Bifrost](https://github.com/maximhq/bifrost): Bifrost is the fastest LLM gateway, with just 11μs overhead at 5,000 RPS, making it 50x faster than LiteLLM. ![GitHub Repo stars](https://img.shields.io/github/stars/maximhq/bifrost?style=social)
+- [Mastra AI](https://github.com/mastra-ai/mastra): a framework for building AI-powered applications and agents with a modern TypeScript stack.
+
+## Complement to this list
+
+- [Open LLMs](https://github.com/eugeneyan/open-llms): A list of open LLMs available for commercial use ![GitHub Repo stars](https://img.shields.io/github/stars/eugeneyan/open-llms?style=social)
+- [Awesome LLM](https://github.com/Hannibal046/Awesome-LLM): Awesome-LLM: a curated list of Large Language Model resources. ![GitHub Repo stars](https://img.shields.io/github/stars/Hannibal046/Awesome-LLM?style=social)
+- [LLaMA Cult and More](https://github.com/shm007g/LLaMA-Cult-and-More): Keeping Track of Affordable LLMs, 🦙 Cult and More ![GitHub Repo stars](https://img.shields.io/github/stars/shm007g/LLaMA-Cult-and-More?style=social)
+- [Awesome Language Agents](https://github.com/ysymyth/awesome-language-agents): List of language agents based on paper "Cognitive Architectures for Language Agents" ![GitHub Repo stars](https://img.shields.io/github/stars/ysymyth/awesome-language-agents?style=social)
+# Learn LangChain
+
+Overview, Tutorial, and Examples of [LangChain](https://langchain.readthedocs.io/en/latest/)
+
+See the accompanying tutorials on [YouTube](https://www.youtube.com/channel/UCyR2Ct3pDOeZSRyZH5hPO-Q)
+
+If you want to get updated when new tutorials are out, get them [delivered to your inbox](https://prodigious-knitter-7293.ck.page/3bd9b7cea6)
+
+If you're new to Jupyter Notebooks or Colab, check out [this video](https://www.youtube.com/watch?v=HW29067qVWk)
+
+### **New To LangChain?**
+Recommended Learning Path:
+1. LangChain CookBook Part 1: 7 Core Concepts - [Code](https://github.com/gkamradt/langchain-tutorials/blob/main/LangChain%20Cookbook%20Part%201%20-%20Fundamentals.ipynb), [Video](https://youtu.be/2xxziIWmaSA)
+2. LangChain CookBook Part 2: 9 Use Cases - [Code](https://github.com/gkamradt/langchain-tutorials/blob/main/LangChain%20Cookbook%20Part%202%20-%20Use%20Cases.ipynb), [Video](https://youtu.be/vGP4pQdCocw)
+3. Explore the projects below and jump into the deep dives
+
+Prompt Engineering (my favorite resources):
+1. [Prompt Engineering Overview](https://www.youtube.com/watch?v=dOxUroR57xs) by [Elvis Saravia](https://twitter.com/omarsar0)
+2. [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) - Prompt engineering basics straight from OpenAI
+3. [Brex's Prompt Engineering Guide](https://github.com/brexhq/prompt-engineering)
+
+## 🤖 **Project Gallery**
+
+🐇 Beginner = Entry level projects to practice LangChain
+
+🐒 Intermediate = In depth use of LangChain
+
+🦈 Advanced = Advanced or custom implementations of LangChain
+
+### **📝 Summarization** - *Deep Dive: [Code](https://github.com/gkamradt/langchain-tutorials/blob/main/data_generation/5%20Levels%20Of%20Summarization%20-%20Novice%20To%20Expert.ipynb), [Video](https://youtu.be/qaPMdcCqtWk)*
+| Project    | Contact | Difficulty | Open Sourced? |  Notes | 
+| - | ----------- | ---------- | :-: | ---------- |
+| [SummarizePaper.com](https://www.summarizepaper.com/)      | Quentin Kral       | 🐒 Intermediate | ✅ [Code](https://github.com/summarizepaper/summarizepaper) | Summarize arXiv papers | 
+
+<br>
+
+### ❓ Question and Answering Over Documents
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| [ChatPDF](https://github.com/akshata29/chatpdf)      | [Ashish Talati](https://github.com/akshata29)       | 🐒 Intermediate | ✅ [Code](https://github.com/akshata29/chatpdf) | Chat and Ask on your own data | 
+
+<br>
+
+### **📦 Extraction**
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| [Kor](https://eyurtsev.github.io/kor/)      | [Eugene Yurtsev](https://twitter.com/veryboldbagel)       | 🐒 Intermediate | ✅ [Code](https://github.com/eyurtsev/kor) | This is a half-baked prototype that “helps” you extract structured data from text using large language models (LLMs) 🧩. | 
+| [OpeningAttributes](https://twitter.com/GregKamradt/status/1643027796850253824)      | [@gregkamradt](https://twitter.com/GregKamradt)       | 🐇 Beginner | ✅ [Code](https://github.com/gkamradt/langchain-tutorials/blob/main/data_generation/Expert%20Structured%20Output%20(Using%20Kor).ipynb) | Extract technologies & tools from job descriptions | 
+
+<br>
+
+### **🔍 Evaluation** 
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| [Auto-Evaluator](https://autoevaluator.langchain.com/)      | [@RLanceMartin](https://twitter.com/RLanceMartin)       | 🦈 Advanced | ✅ [Code](https://github.com/langchain-ai/auto-evaluator) | Evaluate Q&A Chains | 
+
+<br>
+
+### **📊 Querying Tabular Data** 
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| TBD | | | | | 
+
+<br>
+
+### **💻 Code Understanding**
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| TBD | | | | | 
+
+<br>
+
+### **🌐 Interacting with APIs**
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| TBD | | | | | 
+
+<br>
+
+### **💬 Chatbots**
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| [LangChain ChatBot](https://github.com/Haste171/langchain-chatbot)      | [David Peterson](https://github.com/Haste171)       | 🐒 Intermediate | ✅ [Code](https://github.com/Haste171/langchain-chatbot) | Input your PDF documents and analyze, ask questions, or do calculations on the data. |
+
+<br>
+
+### **🤖 Agents**
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| [Agents Via Vocode](https://twitter.com/vocodehq/status/1653104377010483201)      | [@vocode](https://twitter.com/vocodehq)       | 🐒 Intermediate | ✅ [Code](https://github.com/vocodedev/vocode-python) | Agents making phone calls to order pizza |
+| [NexusGPT](https://twitter.com/achammah1/status/1649482899253501958?s=20)      | [@achammah1](https://twitter.com/achammah1)       | 🐒 Intermediate | | AI Freelancer Platform. [Discord](https://discord.gg/Tttk8z9U5x) | 
+
+### **👽 Other 👽**
+| Project      | Contact | Difficulty | Open Sourced? |  Notes | 
+| ----------- | ----------- | ---------- | :-: | ---------- |
+| [Slack-GPT](https://github.com/martinseanhunt/slack-gpt)      | [@martinseanhunt](https://twitter.com/martinseanhunt)       | 🐒 Intermediate | ✅ [Code](https://github.com/martinseanhunt/slack-gpt) | A simple starter for a Slack app / chatbot that uses the Bolt.js Slack app framework, Langchain, openAI and a Pinecone vectorstore to provide LLM generated answers to user questions based on a custom data set. | 
+
+## 💁 Contributing
+
+As an open-source project in a rapidly developing field, we are extremely open to contributions, whether it be in the form of updating code, better documentation, or project to feature.
+
+Submit a PR with notes.
+
+This repo and series is provided by [DataIndependent](https://dataindependent.com/) and run by [Greg Kamradt](https://twitter.com/GregKamradt)# LangChain Experiments
+
+This repository focuses on experimenting with the LangChain library for building powerful applications with large language models (LLMs). By leveraging state-of-the-art language models like OpenAI's GPT-3.5 Turbo (and soon GPT-4), this project showcases how to create a searchable database from a YouTube video transcript, perform similarity search queries using the FAISS library, and respond to user questions with relevant and precise information.
+
+LangChain is a comprehensive framework designed for developing applications powered by language models. It goes beyond merely calling an LLM via an API, as the most advanced and differentiated applications are also data-aware and agentic, enabling language models to connect with other data sources and interact with their environment. The LangChain framework is specifically built to address these principles.
+
+## LangChain
+
+The Python-specific portion of LangChain's documentation covers several main modules, each providing examples, how-to guides, reference docs, and conceptual guides. These modules include:
+
+1. Models: Various model types and model integrations supported by LangChain.
+3. Prompts: Prompt management, optimization, and serialization.
+3. Memory: State persistence between chain or agent calls, including a standard memory interface, memory implementations, and examples of chains and agents utilizing memory.
+4. Indexes: Combining LLMs with custom text data to enhance their capabilities.
+5. Chains: Sequences of calls, either to an LLM or a different utility, with a standard interface, integrations, and end-to-end chain examples.
+6. Agents: LLMs that make decisions about actions, observe the results, and repeat the process until completion, with a standard interface, agent selection, and end-to-end agent examples.
+
+## Use Cases
+With LangChain, developers can create various applications, such as customer support chatbots, automated content generators, data analysis tools, and intelligent search engines. These applications can help businesses streamline their workflows, reduce manual labor, and improve customer experiences.
+
+## Service
+By selling LangChain-based applications as a service to businesses, you can provide tailored solutions to meet their specific needs. For instance, companies can benefit from customizable chatbots that handle customer inquiries, personalized content creation tools for marketing, or internal data analysis systems that harness the power of LLMs to extract valuable insights. The possibilities are vast, and LangChain's flexible framework makes it the ideal choice for developing and deploying advanced language model applications in diverse industries.
+
+## Requirements
+
+- [Python 3.6 or higher](https://www.python.org/downloads/)
+- [LangChain library](https://python.langchain.com/en/latest/index.html)
+- [OpenAI API key](https://platform.openai.com/)
+- [SerpAPI API Key](https://serpapi.com/)
+
+## OpenAI API Models
+The OpenAI API is powered by a diverse set of [models](https://platform.openai.com/docs/models) with different capabilities and price points. You can also make limited customizations to our original base models for your specific use case with fine-tuning.
+
+## Installation
+
+#### 1. Clone the repository
+
+```bash
+git clone https://github.com/daveebbelaar/langchain-experiments.git
+```
+
+#### 2. Create a Python environment
+
+Python 3.6 or higher using `venv` or `conda`. Using `venv`:
+
+``` bash
+cd langchain-experiments
+python3 -m venv env
+source env/bin/activate
+```
+
+Using `conda`:
+``` bash
+cd langchain-experiments
+conda create -n langchain-env python=3.8
+conda activate langchain-env
+```
+
+#### 3. Install the required dependencies
+``` bash
+pip install -r requirements.txt
+```
+
+#### 4. Set up the keys in a .env file
+
+First, create a `.env` file in the root directory of the project. Inside the file, add your OpenAI API key:
+
+```makefile
+OPENAI_API_KEY="your_api_key_here"
+```
+
+Save the file and close it. In your Python script or Jupyter notebook, load the `.env` file using the following code:
+```python
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
+```
+
+By using the right naming convention for the environment variable, you don't have to manually store the key in a separate variable and pass it to the function. The library or package that requires the API key will automatically recognize the `OPENAI_API_KEY` environment variable and use its value.
+
+When needed, you can access the `OPENAI_API_KEY` as an environment variable:
+```python
+import os
+api_key = os.environ['OPENAI_API_KEY']
+```
+
+Now your Python environment is set up, and you can proceed with running the experiments.
+
+## Datalumina
+
+This document is provided to you by Datalumina. We help data analysts, engineers, and scientists launch and scale a successful freelance business — $100k+ /year, fun projects, happy clients. If you want to learn more about what we do, you can visit our [website](https://www.datalumina.io/) and subscribe to our [newsletter](https://www.datalumina.io/newsletter). Feel free to share this document with your data friends and colleagues.
+
+## Tutorials
+For video tutorials on how to use the LangChain library and run experiments, visit the YouTube channel: [youtube.com/@daveebbelaar](https://youtube.com/@daveebbelaar)
+
+# 🚀 LANGCHAIN 1.0 & LANGGRAPH 1.0 MASTERY ROADMAP 2025
+## Zero to Production-Ready AI Engineer | 5 Hours Daily Study Plan
+
+**Last Updated**: December 4, 2025
+**Based on**: LangChain 1.0 & LangGraph 1.0 (Released October 2025)
+**Your Goal**: Master everything, contribute to open source, build production systems
+
+---
+
+## 📊 WHAT'S NEW IN 2025
+
+### 🎯 LangChain 1.0 (October 2025)
+- **BREAKING**: First stable release - NO breaking changes until 2.0
+- **NEW**: `create_agent` abstraction - standard way to build agents
+- **NEW**: Middleware system for context engineering
+- **NEW**: Standardized content blocks (.content_blocks property)
+- **IMPROVED**: Structured output generation (built into agent loop)
+- **MOVED**: Legacy code → `langchain-classic` package
+- **CORE**: Focus on `langchain-core` (essential building blocks)
+
+### 🔥 LangGraph 1.0 (October 2025)
+- **MILESTONE**: First stable release for durable agent frameworks
+- **NEW**: Node caching (skip redundant computation)
+- **NEW**: Deferred nodes (map-reduce, consensus workflows)
+- **NEW**: Pre/Post model hooks (guardrails, human-in-loop)
+- **NEW**: Built-in agent runtime (durable execution, memory, streaming)
+- **ADDED**: LangGraph Supervisor (hierarchical multi-agent systems)
+- **ADDED**: React hook integration for web apps
+- **ADDED**: LangMem SDK (long-term memory)
+- **ADDED**: langgraph-bigtool (large tool libraries)
+
+---
+
+## 🎓 3-LEVEL CURRICULUM (Production-Focused)
+
+### 📘 LEVEL 1: FOUNDATIONS (Weeks 1-3)
+**Goal**: Understand LangChain 1.0 core concepts and build basic agents
+
+#### Week 1: LangChain 1.0 Fundamentals
+**Study Time**: 5 hours/day × 7 days = 35 hours
+
+**Day 1: Setup & Environment**
+- [ ] Install LangChain 1.0 (`pip install langchain>=1.0`)
+- [ ] Setup langchain-core, langchain-community
+- [ ] Configure API keys (OpenAI, Anthropic, or local Ollama)
+- [ ] Understand package structure (core vs classic)
+- [ ] First "Hello World" with new `create_agent`
+
+**Resources**:
+- Official: https://python.langchain.com/docs/versions/release_policy/
+- GitHub: https://github.com/langchain-ai/langchain
+- Changelog: https://changelog.langchain.com/
+
+**Day 2: Core Concepts**
+- [ ] Chat models & LLM abstraction
+- [ ] Messages (Human, AI, System)
+- [ ] Standardized content blocks (.content_blocks)
+- [ ] Prompts & Prompt templates
+- [ ] Output parsers
+
+**Hands-on Project**: Build a basic chatbot with message history
+
+**Day 3: Chains & LCEL**
+- [ ] LangChain Expression Language (LCEL)
+- [ ] Chain composition (pipe operator |)
+- [ ] Runnables interface
+- [ ] Fallback chains
+- [ ] Batch processing
+
+**Hands-on Project**: Multi-step question answering chain
+
+**Day 4: Tools & Function Calling**
+- [ ] Tool definition & binding
+- [ ] Function calling patterns
+- [ ] Tool routing
+- [ ] Error handling in tools
+- [ ] Custom tool creation
+
+**Hands-on Project**: Build calculator agent with tools
+
+**Day 5: Memory & State**
+- [ ] Short-term memory (ConversationBufferMemory)
+- [ ] Message persistence
+- [ ] Session management
+- [ ] Memory optimization
+- [ ] Context window management
+
+**Hands-on Project**: Stateful chatbot with conversation memory
+
+**Day 6: RAG (Retrieval-Augmented Generation)**
+- [ ] Document loaders
+- [ ] Text splitters
+- [ ] Vector stores (Chroma, FAISS, Pinecone)
+- [ ] Embeddings
+- [ ] Retrieval chains
+
+**Hands-on Project**: PDF Q&A system
+
+**Day 7: Week 1 Project**
+**Build**: Production RAG chatbot with:
+- Document ingestion pipeline
+- Vector search
+- Conversation memory
+- Error handling
+- Streaming responses
+
+---
+
+#### Week 2: LangChain Advanced Patterns
+**Study Time**: 5 hours/day × 7 days = 35 hours
+
+**Day 8: Agents with create_agent**
+- [ ] New `create_agent` abstraction (LangChain 1.0)
+- [ ] Agent types (ReAct, Function calling)
+- [ ] Agent executors
+- [ ] Multi-step reasoning
+- [ ] Agent memory
+
+**Hands-on Project**: Research agent with web search
+
+**Day 9: Middleware System (NEW in 1.0)**
+- [ ] What is middleware in LangChain 1.0
+- [ ] Pre-processing middleware
+- [ ] Post-processing middleware
+- [ ] Context engineering patterns
+- [ ] Middleware composition
+
+**Hands-on Project**: Build custom middleware for content filtering
+
+**Day 10: Structured Output**
+- [ ] Pydantic models
+- [ ] Tool-based structured output
+- [ ] Provider-native structured output
+- [ ] JSON mode
+- [ ] Error recovery
+
+**Hands-on Project**: Data extraction agent (resume parser)
+
+**Day 11: Multi-Model Systems**
+- [ ] Model routing (cheap vs expensive)
+- [ ] Fallback chains
+- [ ] Model comparison
+- [ ] Cost optimization
+- [ ] Latency vs quality tradeoffs
+
+**Hands-on Project**: Hybrid system (local + API models)
+
+**Day 12: Production Patterns**
+- [ ] Error handling & retries
+- [ ] Logging & observability
+- [ ] Rate limiting
+- [ ] Caching strategies
+- [ ] Cost tracking
+
+**Hands-on Project**: Production-ready chatbot wrapper
+
+**Day 13: Integration Deep Dive**
+- [ ] Popular integrations (Google, AWS, Azure)
+- [ ] Custom integrations
+- [ ] API wrappers
+- [ ] Database connectors
+- [ ] File system tools
+
+**Hands-on Project**: Multi-source data agent
+
+**Day 14: Week 2 Project**
+**Build**: AI research assistant with:
+- Web search tools
+- Document analysis
+- Structured output (Pydantic)
+- Multi-model routing
+- Production error handling
+
+---
+
+#### Week 3: Testing & Deployment
+**Study Time**: 5 hours/day × 7 days = 35 hours
+
+**Day 15: Testing LangChain Apps**
+- [ ] Unit testing chains
+- [ ] Mocking LLM responses
+- [ ] Integration testing
+- [ ] Evaluation frameworks
+- [ ] Regression testing
+
+**Hands-on Project**: Test suite for Week 2 project
+
+**Day 16: LangSmith Integration**
+- [ ] LangSmith setup
+- [ ] Tracing & debugging
+- [ ] Dataset management
+- [ ] Evaluation runs
+- [ ] Production monitoring
+
+**Hands-on Project**: Add LangSmith to existing project
+
+**Day 17: FastAPI Integration**
+- [ ] LangServe basics
+- [ ] Endpoint creation
+- [ ] Streaming endpoints
+- [ ] Authentication
+- [ ] CORS & security
+
+**Hands-on Project**: API wrapper for chatbot
+
+**Day 18: Docker & Containerization**
+- [ ] Dockerfile for LangChain apps
+- [ ] Multi-stage builds
+- [ ] Environment variables
+- [ ] Volume management
+- [ ] Docker Compose
+
+**Hands-on Project**: Containerized LangChain app
+
+**Day 19: Cloud Deployment**
+- [ ] Deploy to AWS/GCP/Azure
+- [ ] Serverless patterns (Lambda)
+- [ ] Container orchestration
+- [ ] Secrets management
+- [ ] CI/CD pipelines
+
+**Hands-on Project**: Deploy chatbot to cloud
+
+**Day 20: Security & Best Practices**
+- [ ] Prompt injection prevention
+- [ ] Input validation
+- [ ] Rate limiting
+- [ ] API key management
+- [ ] User authentication
+
+**Hands-on Project**: Secure your deployed app
+
+**Day 21: Level 1 Final Project**
+**Build**: Production-grade RAG system deployed to cloud:
+- Document ingestion API
+- Query API with streaming
+- User authentication
+- LangSmith monitoring
+- Docker deployment
+- Full test coverage
+
+---
+
+### 📗 LEVEL 2: LANGGRAPH MASTERY (Weeks 4-7)
+**Goal**: Build stateful, multi-agent systems with LangGraph 1.0
+
+#### Week 4: LangGraph Foundations
+**Study Time**: 5 hours/day × 7 days = 35 hours
+
+**Day 22: LangGraph 1.0 Basics**
+- [ ] Install LangGraph 1.0 (`pip install langgraph>=1.0`)
+- [ ] Core concepts: Nodes, Edges, State
+- [ ] StateGraph vs MessageGraph
+- [ ] Compiling graphs
+- [ ] Basic execution
+
+**Resources**:
+- Official: https://langchain-ai.github.io/langgraph/
+- GitHub: https://github.com/langchain-ai/langgraph
+- Blog: https://blog.langchain.com/langgraph-release-week-recap/
+
+**Hands-on Project**: Simple router graph
+
+**Day 23: State Management**
+- [ ] TypedDict for state
+- [ ] State reducers (Annotated)
+- [ ] State updates
+- [ ] Partial state
+- [ ] State persistence
+
+**Hands-on Project**: Stateful conversation graph
+
+**Day 24: Node Patterns**
+- [ ] Node functions
+- [ ] Async nodes
+- [ ] Node factories
+- [ ] Error handling in nodes
+- [ ] Node testing
+
+**Hands-on Project**: Multi-node pipeline
+
+**Day 25: Conditional Routing**
+- [ ] Conditional edges
+- [ ] Router functions
+- [ ] Dynamic routing
+- [ ] Fallback paths
+- [ ] Loop detection
+
+**Hands-on Project**: Intent-based routing system
+
+**Day 26: Streaming (NEW in 1.0)**
+- [ ] Token streaming
+- [ ] Step streaming
+- [ ] State streaming
+- [ ] Event streaming
+- [ ] Production streaming patterns
+
+**Hands-on Project**: Real-time chatbot with streaming
+
+**Day 27: Checkpoints & Persistence**
+- [ ] Checkpoint savers
+- [ ] SQLite checkpointer
+- [ ] Resume from checkpoint
+- [ ] Time travel debugging
+- [ ] Checkpoint cleanup
+
+**Hands-on Project**: Resumable workflow system
+
+**Day 28: Week 4 Project**
+**Build**: Customer support agent with:
+- Intent routing
+- Conversation state
+- Tool integration
+- Streaming responses
+- Checkpoint persistence
+
+---
+
+#### Week 5: Advanced LangGraph Features
+**Study Time**: 5 hours/day × 7 days = 35 hours
+
+**Day 29: Human-in-the-Loop**
+- [ ] Interrupt points
+- [ ] User input collection
+- [ ] Approval workflows
+- [ ] Edit & continue
+- [ ] Timeout handling
+
+**Hands-on Project**: Approval-based agent
+
+**Day 30: Subgraphs & Composition**
+- [ ] Nested graphs
+- [ ] Subgraph state mapping
+- [ ] Graph reusability
+- [ ] Composition patterns
+- [ ] Testing composed graphs
+
+**Hands-on Project**: Modular agent system
+
+**Day 31: Node Caching (NEW in 1.0)**
+- [ ] Enable node caching
+- [ ] Cache invalidation
+- [ ] Cache keys
+- [ ] Performance optimization
+- [ ] Cache monitoring
+
+**Hands-on Project**: Cached data processing pipeline
+
+**Day 32: Deferred Nodes (NEW in 1.0)**
+- [ ] Deferred execution
+- [ ] Map-reduce patterns
+- [ ] Consensus workflows
+- [ ] Barrier synchronization
+- [ ] Parallel processing
+
+**Hands-on Project**: Map-reduce document analyzer
+
+**Day 33: Pre/Post Model Hooks (NEW in 1.0)**
+- [ ] Pre-model hooks (context control)
+- [ ] Post-model hooks (guardrails)
+- [ ] Hook composition
+- [ ] Error handling in hooks
+- [ ] Production patterns
+
+**Hands-on Project**: Content moderation system
+
+**Day 34: LangGraph Runtime**
+- [ ] Durable execution
+- [ ] Memory management
+- [ ] Background tasks
+- [ ] Runtime configuration
+- [ ] Monitoring & metrics
+
+**Hands-on Project**: Long-running agent workflow
+
+**Day 35: Week 5 Project**
+**Build**: Multi-agent research system with:
+- Hierarchical agents
+- Map-reduce research
+- Human approval steps
+- Node caching
+- Pre/post hooks for safety
+
+---
+
+#### Week 6: Multi-Agent Systems
+**Study Time**: 5 hours/day × 7 days = 35 hours
+
+**Day 36: LangGraph Supervisor (NEW)**
+- [ ] Install `langgraph-supervisor`
+- [ ] Hierarchical agent patterns
+- [ ] Supervisor-worker architecture
+- [ ] Task delegation
+- [ ] Result aggregation
+
+**Hands-on Project**: Supervisor-based team
+
+**Day 37: Agent Communication**
+- [ ] Message passing
+- [ ] Shared state
+- [ ] Event buses
+- [ ] Inter-agent protocols
+- [ ] Conflict resolution
+
+**Hands-on Project**: Collaborative agent team
+
+**Day 38: Specialized Agents**
+- [ ] Research agents
+- [ ] Planning agents
+- [ ] Execution agents
+- [ ] Validation agents
+- [ ] Agent composition
+
+**Hands-on Project**: Multi-specialist system
+
+**Day 39: Agent Orchestration**
+- [ ] Sequential workflows
+- [ ] Parallel execution
+- [ ] Conditional routing
+- [ ] Loop patterns
+- [ ] Error recovery
+
+**Hands-on Project**: Complex workflow orchestrator
+
+**Day 40: Tool Ecosystems**
+- [ ] Large tool libraries (langgraph-bigtool)
+- [ ] Tool discovery
+- [ ] Tool routing
+- [ ] Tool composition
+- [ ] Tool versioning
+
+**Hands-on Project**: Agent with 50+ tools
+
+**Day 41: Memory Systems (LangMem)**
+- [ ] Install `langmem` SDK
+- [ ] Short-term memory
+- [ ] Long-term memory
+- [ ] Memory retrieval
+- [ ] Memory optimization
+
+**Hands-on Project**: Learning agent with memory
+
+**Day 42: Week 6 Project**
+**Build**: Complete multi-agent company:
+- CEO agent (supervisor)
+- Research team
+- Development team
+- QA team
+- Shared memory system
+- Production deployment
+
+---
+
+#### Week 7: Production LangGraph
+**Study Time**: 5 hours/day × 7 days = 35 hours
+
+**Day 43: LangGraph Cloud/Platform**
+- [ ] LangGraph Platform overview
+- [ ] Deployment options
+- [ ] API endpoints
+- [ ] Authentication
+- [ ] Monitoring
+
+**Hands-on Project**: Deploy graph to platform
+
+**Day 44: React Integration (NEW)**
+- [ ] LangGraph React hooks
+- [ ] Thread management
+- [ ] State streaming to UI
+- [ ] Message branching
+- [ ] Real-time updates
+
+**Hands-on Project**: React + LangGraph app
+
+**Day 45: Performance Optimization**
+- [ ] Graph optimization
+- [ ] Parallel execution
+- [ ] Caching strategies
+- [ ] Resource management
+- [ ] Profiling
+
+**Hands-on Project**: Optimize Week 6 project
+
+**Day 46: Testing Multi-Agent Systems**
+- [ ] Unit test nodes
+- [ ] Integration test graphs
+- [ ] Mock external services
+- [ ] Evaluation frameworks
+- [ ] CI/CD for graphs
+
+**Hands-on Project**: Full test suite
+
+**Day 47: Monitoring & Observability**
+- [ ] LangSmith for graphs
+- [ ] Custom metrics
+- [ ] Alerting
+- [ ] Debugging tools
+- [ ] Performance dashboards
+
+**Hands-on Project**: Full observability stack
+
+**Day 48: Security & Compliance**
+- [ ] Agent safety
+- [ ] Output validation
+- [ ] PII handling
+- [ ] Audit logging
+- [ ] Compliance patterns
+
+**Hands-on Project**: Enterprise-grade security
+
+**Day 49: Level 2 Final Project**
+**Build**: Production SaaS platform:
+- Multi-tenant agent system
+- React frontend
+- LangGraph backend
+- Full monitoring
+- Security hardened
+- Deployed to cloud
+
+---
+
+### 📕 LEVEL 3: EXPERT & OPEN SOURCE (Weeks 8-12)
+**Goal**: Contribute to open source, build innovative projects
+
+#### Week 8: Advanced Architectures
+**Day 50-56**: Build 7 advanced patterns:
+1. Self-improving agents (learning from feedback)
+2. Autonomous task decomposition
+3. Multi-modal agents (vision + text + code)
+4. Real-time collaborative agents
+5. Agent-driven data pipelines
+6. Autonomous debugging systems
+7. Meta-agents (agents that build agents)
+
+---
+
+#### Week 9: Contributing to Open Source
+**Day 57-63**: Deep dive into LangChain/LangGraph codebase:
+- [ ] Clone & study langchain repo
+- [ ] Clone & study langgraph repo
+- [ ] Fix 3 beginner issues
+- [ ] Submit 3 documentation PRs
+- [ ] Add 1 feature (small)
+- [ ] Join community discussions
+- [ ] Become active contributor
+
+**Resources**:
+- LangChain GitHub: https://github.com/langchain-ai/langchain
+- LangGraph GitHub: https://github.com/langchain-ai/langgraph
+- Contributing Guide: Read CONTRIBUTING.md
+
+---
+
+#### Week 10: Community Projects (3 Levels)
+
+**BEGINNER Projects** (Days 64-65):
+1. **PDF Q&A Bot** - https://github.com/alphasecio/langchain-examples
+2. **YouTube Transcript Query** - Awesome-LangChain
+3. **Semantic Search for Google Drive** - Community project
+4. **Simple Chatbot with Memory** - LangChain tutorials
+
+**INTERMEDIATE Projects** (Days 66-68):
+1. **Multi-Model RAG System** - ProjectPro
+2. **Agent with Custom Tools** - LangChain Academy
+3. **Hierarchical Agent Team** - LangGraph examples
+4. **Real-time Sentiment Analyzer** - Community
+
+**ADVANCED Projects** (Days 69-70):
+1. **Production RAG with Multi-Agent Search** - Enterprise
+2. **Self-Improving Recommendation System** - Research
+3. **Autonomous Code Review Agent** - DevOps
+4. **LinkedIn Agent System** (like LinkedIn's actual system)
+
+---
+
+#### Week 11: Build Unique Project
+**Day 71-77**: Your unique contribution to the ecosystem
+
+**Ideas** (pick one or create your own):
+1. **AI-Powered CRM Agent** (your previous project + LangGraph)
+2. **Reddit Lead Agent** (autonomous lead generation)
+3. **Drywall Business Automation Suite**
+4. **YouTube Content Creator Agent**
+5. **Open Source Documentation Agent**
+6. **AI Research Paper Analyzer**
+7. **Multi-Agent Software Development Team**
+
+**Requirements**:
+- Use LangChain 1.0 + LangGraph 1.0
+- Production-ready code
+- Full test coverage
+- Docker deployment
+- Documentation
+- Open source on GitHub
+
+---
+
+#### Week 12: Polish & Share
+**Day 78-84**: Final polish and community engagement
+
+- [ ] Write comprehensive README
+- [ ] Create video demo
+- [ ] Write blog post/tutorial
+- [ ] Share on Twitter/X (@LangChainAI)
+- [ ] Post on LinkedIn
+- [ ] Submit to awesome-langchain
+- [ ] Present in community forum
+- [ ] Add to portfolio
+
+---
+
+## 📚 OFFICIAL RESOURCES TO FOLLOW
+
+### GitHub (Star & Watch)
+- [ ] https://github.com/langchain-ai/langchain
+- [ ] https://github.com/langchain-ai/langgraph
+- [ ] https://github.com/kyrolabs/awesome-langchain
+- [ ] https://github.com/von-development/awesome-LangGraph
+
+### Social Media (Follow Daily)
+- [ ] Twitter/X: @LangChainAI (217.8K followers)
+- [ ] LinkedIn: LangChain company page
+- [ ] Harrison Chase: @hwchase17 (founder)
+
+### Documentation (Bookmark)
+- [ ] https://python.langchain.com/
+- [ ] https://langchain-ai.github.io/langgraph/
+- [ ] https://changelog.langchain.com/
+- [ ] https://blog.langchain.com/
+
+### Learning Platforms
+- [ ] LangChain Academy (free courses)
+- [ ] DeepLearning.AI LangChain courses
+- [ ] ProjectPro tutorials
+- [ ] Analytics Vidhya tutorials
+
+---
+
+## ⏰ 5-HOUR DAILY STUDY STRUCTURE
+
+### Daily Schedule Template
+
+**Hour 1: Theory & Documentation (9:00-10:00)**
+- Read official docs
+- Watch tutorials
+- Study community posts
+- Take notes
+
+**Hour 2: Code Reading (10:00-11:00)**
+- Study example code
+- Read open source projects
+- Analyze patterns
+- Debug examples
+
+**BREAK (15 min)**
+
+**Hour 3: Hands-on Practice (11:15-12:15)**
+- Follow tutorials
+- Build small projects
+- Experiment with code
+- Break things & fix them
+
+**Hour 4: Project Work (12:15-1:15)**
+- Work on weekly project
+- Apply what you learned
+- Test thoroughly
+- Document progress
+
+**BREAK (30 min - Lunch)**
+
+**Hour 5: Community & Review (1:45-2:45)**
+- Check Twitter/X, LinkedIn
+- Read community discussions
+- Answer questions (if you can)
+- Review & reflect on learning
+
+---
+
+## 📊 PROGRESS TRACKING SYSTEM
+
+Create this file: `~/langgraph_learning/DAILY_LOG.md`
+
+### Daily Log Template
+```markdown
+# Daily Learning Log
+
+## [Date] - Day X
+
+### ✅ Completed
+- [ ] Topic 1
+- [ ] Topic 2
+- [ ] Hands-on project
+
+### 📝 Notes
+- Key insights...
+- Challenges faced...
+- Questions to explore...
+
+### ⏱️ Time Breakdown
+- Theory: X hours
+- Coding: X hours
+- Projects: X hours
+- Community: X hours
+
+### 🔗 Resources Used
+- [Title](link)
+
+### 💡 Tomorrow's Plan
+- [ ] Task 1
+- [ ] Task 2
+```
+
+---
+
+## 🎯 MILESTONES & CHECKPOINTS
+
+### Level 1 Complete (Week 3)
+✅ Built production RAG system
+✅ Deployed to cloud
+✅ Full test coverage
+✅ LangSmith integrated
+
+### Level 2 Complete (Week 7)
+✅ Built multi-agent system
+✅ React + LangGraph app
+✅ Production deployment
+✅ All LangGraph 1.0 features used
+
+### Level 3 Complete (Week 12)
+✅ Contributed to open source
+✅ Built unique project
+✅ Shared with community
+✅ Portfolio-ready work
+
+---
+
+## 🚀 NEXT STEPS (After 12 Weeks)
+
+### Career Options
+1. **Open Source Contributor** - Core team member
+2. **AI Engineer** - Build production systems
+3. **Consultant** - Help companies implement
+4. **Educator** - Teach others
+5. **Startup Founder** - Build AI products
+
+### Continuous Learning
+- Follow LangChain releases
+- Join LangChain Discord
+- Attend conferences
+- Write tutorials
+- Build portfolio projects
+
+---
+
+## 💪 COMMITMENT CONTRACT
+
+**I commit to**:
+- [ ] 5 hours study daily (minimum)
+- [ ] Complete all weekly projects
+- [ ] Document everything I learn
+- [ ] Share knowledge with community
+- [ ] Contribute to open source
+- [ ] Build unique projects
+- [ ] Never stop learning
+
+**Start Date**: December 4, 2025
+**Target Completion**: March 4, 2026 (12 weeks)
+
+---
+
+## 📞 COMMUNITY & SUPPORT
+
+### Where to Get Help
+- LangChain Discord
+- GitHub Discussions
+- Stack Overflow (tag: langchain)
+- Twitter/X (#LangChain)
+- Reddit (r/LangChain)
+
+### How to Give Back
+- Answer questions
+- Write tutorials
+- Fix bugs
+- Improve docs
+- Share projects
+- Mentor beginners
+
+---
+
+**Remember**: This is not a race. It's a marathon. Focus on MASTERY, not speed.
+
+🎯 **Your goal**: Become a world-class LangChain/LangGraph engineer who contributes to the ecosystem and builds amazing things.
+
+Let's do this! 💪🔥
+# Building Your First AI Agent: A Real Learning Journey
+
+> **A step-by-step documentation of building a production-ready customer support agent with OpenAI, following the ReAct pattern. This is an authentic learning session - questions, mistakes, and all.**
+
+---
+
+## Session Overview
+
+**Project:** Level 1 - Customer Support Agent with OpenAI
+**Duration:** ~6-8 hours
+**Tech Stack:** Python, OpenAI GPT-4o-mini, pytest
+**Learning Approach:** Test-Driven Development (TDD) + ReAct Pattern
+
+---
+
+## Phase 1: Project Setup
+
+### Student Question:
+> "Done installing libraries, but you didn't tell me the folder structure. What files did you create?"
+
+### Teacher Response:
+
+Great question! Understanding the project structure is crucial before writing code. Here's what we have:
+
+```
+customer-support-agent/
+├── venv/                  # Virtual environment (ignore)
+├── tests/                 # Test files
+│   ├── __init__.py
+│   ├── test_tools.py      # Tests for tools
+│   ├── test_agent.py      # Tests for agent
+│   └── test_integration.py # End-to-end tests
+├── agent.py               # Main agent with ReAct loop (EMPTY)
+├── tools.py               # 3 support functions (EMPTY)
+├── config.py              # Settings (✅ DONE)
+├── requirements.txt       # Dependencies (✅ DONE)
+├── CLAUDE.md              # Project guide (✅ DONE)
+└── .env.example           # API key template (✅ DONE)
+```
+
+**What each file does:**
+
+1. **config.py** - Centralized settings (API key, model name, token limits, pricing)
+2. **tools.py** - The 3 functions our agent can call (search FAQ, check orders, create tickets)
+3. **agent.py** - The brain of the system (ReAct loop + OpenAI function calling)
+4. **tests/** - Tests we write FIRST (Test-Driven Development approach)
+
+### 🔧 Hands-on Commands:
+
+```bash
+cd /home/intruder/customer-support-agent
+source venv/bin/activate
+pip install -r requirements.txt
+
+# Create your API key file
+cp .env.example .env
+nano .env  # Add: OPENAI_API_KEY=sk-...
+```
+
+### 💡 Learning Point:
+
+**Why this structure?**
+- **Separation of concerns:** Tools (tools.py) separate from logic (agent.py)
+- **Configuration management:** All settings in one place (config.py)
+- **Test-first mindset:** Test files exist before implementation
+- **Environment security:** `.env` keeps secrets out of code
+
+### ⚠️ Common Mistake:
+
+Don't put your API key directly in code! Always use environment variables (`.env` file) and add `.env` to `.gitignore`.
+
+---
+
+## Phase 2: Architecture Design
+
+### Student Question:
+> "I need to learn and know how we are doing this right. Guide me step by step."
+
+### Teacher Response:
+
+Perfect! Let's understand the architecture BEFORE coding. This is professional software engineering.
+
+#### The ReAct Pattern (Core Concept)
+
+**ReAct = Reasoning + Acting**
+
+Here's how it works:
+
+```
+User: "Where is my order #12345?"
+   ↓
+┌─────────────────────────────────────┐
+│ THOUGHT PHASE (Agent Reasons)       │
+│ "User wants order status.           │
+│  I need to call get_order_status()" │
+└─────────────────────────────────────┘
+   ↓
+┌─────────────────────────────────────┐
+│ ACTION PHASE (Agent Acts)           │
+│ Execute: get_order_status("12345")  │
+└─────────────────────────────────────┘
+   ↓
+┌─────────────────────────────────────┐
+│ OBSERVATION PHASE (Process Result)  │
+│ Result: {"status": "shipped",       │
+│          "tracking": "1Z999..."}    │
+└─────────────────────────────────────┘
+   ↓
+┌─────────────────────────────────────┐
+│ RESPONSE (Agent Responds)           │
+│ "Your order #12345 has shipped!     │
+│  Tracking: 1Z999..."                │
+└─────────────────────────────────────┘
+```
+
+#### Our Agent's 3 Tools
+
+1. **search_faq(query: str)** → Search knowledge base
+2. **get_order_status(order_id: str)** → Look up order
+3. **create_ticket(issue: str, priority: str)** → Escalate to human
+
+#### OpenAI Function Calling Flow
+
+```python
+# Simplified version of what happens:
+
+messages = [
+    {"role": "user", "content": "Where's my order #123?"}
+]
+
+# Agent decides which function to call
+response = openai.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=messages,
+    tools=[search_faq_schema, get_order_status_schema, create_ticket_schema]
+)
+
+# OpenAI returns: "Call get_order_status with order_id='123'"
+# We execute the function
+result = get_order_status("123")
+
+# Send result back to agent
+messages.append({"role": "tool", "content": result})
+
+# Agent generates final response
+final_response = openai.chat.completions.create(...)
+```
+
+### 💡 Learning Point:
+
+**Why ReAct over simple prompting?**
+
+❌ **Simple Prompt:** "You're a support agent. Answer this: Where's order #123?"
+- Agent guesses/hallucinates
+- No real data access
+- Unreliable
+
+✅ **ReAct with Tools:** Agent can actually call `get_order_status()` and get real data
+- Grounded in facts
+- Transparent decision-making
+- Production-ready
+
+### Roadmap (8 Steps)
+
+- [x] Step 1: Setup & Install Dependencies ✅
+- [x] Step 2: Design Architecture ✅
+- [ ] Step 3: Write Tests First (TDD)
+- [ ] Step 4: Implement tools.py
+- [ ] Step 5: Implement agent.py (ReAct loop)
+- [ ] Step 6: Add Observability (logging, metrics)
+- [ ] Step 7: Add Guardrails (safety, rate limits)
+- [ ] Step 8: Demo & Deploy
+
+---
+
+## Phase 3: Test-Driven Development (TDD)
+
+### Why Write Tests First?
+
+**Traditional Approach (❌ Don't do this):**
+1. Write code
+2. Test it manually
+3. Find bugs
+4. Fix bugs
+5. Hope it works in production
+
+**TDD Approach (✅ Professional):**
+1. Write test describing what SHOULD happen
+2. Run test (it fails - no code yet!)
+3. Write MINIMAL code to pass test
+4. Run test (it passes!)
+5. Refactor and repeat
+
+**Benefits:**
+- Forces you to think about behavior BEFORE implementation
+- Catches bugs early
+- Makes refactoring safe
+- Documents expected behavior
+
+### 🔧 Next Steps:
+
+We'll write tests for:
+1. `test_tools.py` - Each function works correctly
+2. `test_agent.py` - ReAct loop logic
+3. `test_integration.py` - End-to-end workflows
+
+---
+
+## [TO BE CONTINUED AS WE BUILD...]
+
+---
+
+## Key Concepts Learned So Far
+
+1. **ReAct Pattern** - Reasoning + Acting loop for agents
+2. **OpenAI Function Calling** - How LLMs decide which tools to use
+3. **Project Structure** - Separation of concerns (tools vs agent vs config)
+4. **Environment Variables** - Secure API key management
+5. **TDD Mindset** - Tests first, code second
+
+---
+
+## Resources
+
+- OpenAI Function Calling Docs: https://platform.openai.com/docs/guides/function-calling
+- ReAct Paper: https://arxiv.org/abs/2210.03629
+- TDD Guide: https://martinfowler.com/bliki/TestDrivenDevelopment.html
+
+---
+
+**Last Updated:** [Live Session]
+**Progress:** Phase 2/8 Complete
+
+---
+
+## Phase 8: Final Summary
+
+### What We Built
+
+✅ **Production-Ready AI Agent**
+- ReAct loop with OpenAI function calling
+- Real SQLite database (not mocks!)
+- 3 support tools (FAQ, orders, tickets)
+- 31 passing tests (TDD approach)
+- Token tracking & cost monitoring
+- Safety limits (max 2 iterations)
+
+### Files Created
+
+1. **agent.py** (274 lines) - ReAct brain
+2. **tools.py** (191 lines) - 3 support functions
+3. **database.py** (250 lines) - SQLite layer
+4. **config.py** - Settings
+5. **tests/test_agent.py** (270 lines) - 17 agent tests
+6. **tests/test_tools.py** (170 lines) - 14 tool tests
+7. **README.md** - Complete documentation
+8. **support.db** - Real SQLite database (28KB)
+
+### Key Metrics
+
+- **Total Code:** ~700 lines
+- **Tests:** 31 passing (29 run, 2 skipped)
+- **Test Coverage:** Tools + Agent + Integration
+- **Database:** 4 FAQs, 3 orders, auto-generated tickets
+- **Cost:** ~$0.002 per conversation
+- **Safety:** Max 2 iterations prevents infinite loops
+
+### Technologies Mastered
+
+1. **OpenAI Function Calling** - JSON schemas, tool selection
+2. **ReAct Pattern** - Reasoning + Acting loop
+3. **SQLite** - Real database (tables, queries, persistence)
+4. **TDD** - Tests first, code second
+5. **Error Handling** - Graceful failures
+6. **Cost Tracking** - Token counting, price calculation
+
+### Learning Highlights
+
+**Q: Why use ReAct instead of simple prompting?**
+A: ReAct gives agents access to real data (no hallucinations) and transparent decision-making.
+
+**Q: Why SQLite instead of mock data?**
+A: Learn real database patterns, production-ready from day 1, easy to upgrade later.
+
+**Q: Why write tests first?**
+A: TDD forces clear thinking about behavior before implementation. 31 passing tests = high confidence.
+
+**Q: What is max iteration safety?**
+A: Prevents infinite loops by limiting to 2 OpenAI API calls per conversation. Saves money and prevents hangs.
+
+### Next Steps (Your Journey)
+
+After completing Level 1, you can:
+
+**Level 2:** Build content generation pipeline with Claude + prompt caching
+**Level 3:** Multi-agent research system with CrewAI
+**Level 5:** RAG system with vector database + semantic search
+**Level 10:** Physical AI with robotics and VLA models
+
+### Production Checklist
+
+If you want to deploy this agent:
+
+- [ ] Add authentication (user login)
+- [ ] Implement rate limiting (per user/IP)
+- [ ] Add logging to files (not just console)
+- [ ] Set up monitoring (error alerts, usage dashboards)
+- [ ] Use production database (PostgreSQL/MySQL)
+- [ ] Add caching layer (Redis for frequently asked questions)
+- [ ] Create web UI (Streamlit/Gradio/React)
+- [ ] Containerize with Docker
+- [ ] Deploy to cloud (AWS/GCP/Azure)
+- [ ] Set up CI/CD pipeline
+
+### Final Thoughts
+
+You just built a **real AI agent** from scratch!
+
+**Not a tutorial project.** Not a toy. A production-ready system with:
+- Real database persistence
+- Comprehensive test coverage
+- Professional error handling
+- Cost tracking & monitoring
+- Safety guardrails
+
+**This is the foundation** for all agentic AI systems:
+1. Tools (functions the agent can call)
+2. ReAct loop (decision-making process)
+3. Memory (conversation context)
+4. Safety (iteration limits, validation)
+
+**You're now ready** to build more complex multi-agent systems, RAG pipelines, and eventually physical AI robots!
+
+---
+
+## Resources for Continued Learning
+
+**Documentation:**
+- OpenAI Function Calling: https://platform.openai.com/docs/guides/function-calling
+- ReAct Paper: https://arxiv.org/abs/2210.03629
+- SQLite Tutorial: https://www.sqlitetutorial.net/
+- pytest Guide: https://docs.pytest.org/
+
+**Next Projects:**
+- Add semantic search with embeddings
+- Build multi-agent collaboration system
+- Create RAG pipeline with vector DB
+- Integrate with real CRM (HubSpot/Salesforce)
+
+**Community:**
+- LangChain Discord
+- r/LocalLLaMA
+- OpenAI Developer Forum
+
+---
+
+**Congratulations on completing Level 1!** 🎉
+
+You've learned:
+- ✅ OpenAI function calling
+- ✅ ReAct pattern
+- ✅ Real databases
+- ✅ Test-driven development
+- ✅ Production patterns
+- ✅ Cost optimization
+
+**Total development time:** ~6 hours
+**Your skill level:** Agentic AI Developer (Level 1 complete)
+
+**Next:** Try the agent yourself, then move to Level 2!
+
+```bash
+python agent.py
+```
+
+---
+
+**Session Complete:** September 30, 2025
+**From:** Zero knowledge of AI agents
+**To:** Production-ready ReAct agent with tests
+**Approach:** Learning by building (not just tutorials)
+
+Retrieval-Augmented Generation (RAG) is a powerful technique to improve the accuracy and relevance of Large Language Model (LLM) responses by integrating external,
+ up-to-date information sources. This approach allows an AI model to ground its answers in specific data,
+ reducing hallucinations and enabling domain-specific expertise without expensive retraining of the underlying model.
+LangChain is the predominant open-source framework that simplifies the development and "plumbing" of such LLM applications.
+ It provides a suite of modular components and standard interfaces that developers can use to load data, process it, store it,
+ retrieve relevant information, and orchestrate the final generation process.The Core Concepts of RAGRAG combines a retrieval mechanism with a generation model.
+ The core idea is that when a user asks a question, the system first retrieves relevant documents or data chunks from a knowledge base,
+ and then uses that retrieved information as context for the LLM to formulate an informed answer.This architecture has two main phases:1.
+ Indexing (Data Preparation)Before any questions can be answered, the knowledge base must be processed and indexed.
+ This ingestion pipeline involves several key steps that LangChain helps orchestrate:Document Loading:
+ The process begins with importing data from various sources like PDFs, text files, web pages, Notion databases, or SQL databases.
+ LangChain offers a wide array of document loaders to handle different formats.Splitting (Chunking): Raw documents are often too large to fit into an LLM's context window.
+ They are split into smaller, manageable "chunks" or passages. LangChain provides various text splitters, including RecursiveCharacterTextSplitter,
+ which attempts to split by paragraphs and sentences first, ensuring minimal loss of semantic context, and even "structure-aware" chunkers that use metadata.
+Embedding: Each text chunk is converted into a numerical representation called a vector embedding using an embedding model (e.g., from OpenAI or Hugging Face).
+ These embeddings capture the semantic meaning of the text.Vector Storage: The embeddings are stored in a vector database (vector store).
+ Popular choices that integrate seamlessly with LangChain include Pinecone, Chroma, and Weaviate, which are optimized for fast similarity search.2. 
+Retrieval and Generation (Query Time)When a user submits a query:Query Embedding: The user's question is also converted into a vector embedding using the same embedding model
+ used during the indexing phase.Retrieval: The system performs a similarity search in the vector database to find the top \(k\) most relevant document chunks to the query. 
+This component in LangChain is called a Retriever.Augmentation: The retrieved documents are combined with the original user query and a set of instructions (a prompt template).
+ This forms a single, comprehensive prompt that provides the LLM with all necessary context.Generation: The augmented prompt is sent to the Large Language Model (LLM), 
+which uses the provided context to generate a factual, grounded, and conversational response.
+LangChain's Role in Building RAG SystemsLangChain acts as the orchestration layer, 
+connecting these disparate components with standard interfaces. It allows developers to swap out different models and databases with minimal code changes.
+Key LangChain modules for RAG include:langchain-core/documents: Classes for representing and handling documents and their associated metadata.
+langchain-community: Contains a vast collection of third-party integrations for everything from document loaders to various vector stores and chat models.
+langchain/chains: Provides pre-built logic for common sequences, such as the create_retrieval_chain, which handles the standard "stuffing" of retrieved documents into a prompt and generating a response.
+langchain/agents & LangGraph: For more complex RAG implementations where the model needs to decide if and when to use retrieval as a tool, LangChain offers agents and a state machine library, LangGraph.
+ This agentic RAG pattern allows the LLM to handle simple greetings directly but trigger a search for complex, knowledge-intensive questions.
+Advanced RAG Techniques with LangChainWhile a "naive" or "basic" RAG implementation is a great starting point, LangChain facilitates advanced techniques to overcome common challenges like slow performance with large knowledge bases, 
+poor retrieval accuracy, and suboptimal chunking strategies.Parent Document Retrieval:
+ A technique where smaller chunks are used for the initial similarity search, but the larger "parent" document or surrounding context is retrieved and passed to the LLM for generation,
+ providing richer context.Contextual Compression: Post-retrieval processing that compresses the retrieved documents to only include the most relevant sentences or phrases, 
+ensuring the most important information fits within the LLM's context window.RAG-Fusion / Diverse Retrieval: Generating multiple slightly different search queries from a single user question to improve the diversity and 
+recall of retrieved documents.Query Transformation: 
+Using an LLM to reformulate the user's query into an optimized search query based on conversational context.
+
+SummaryRAG with LangChain has become the de facto standard for building knowledgeable and factual AI applications. 
+It leverages a robust, modular framework to bridge the gap between static LLM knowledge and dynamic external data, providing a scalable and cost-effective approach to creating specialized AI assistants.
+ Developers can leverage extensive documentation and tutorials on the official LangChain documentation to build everything from basic Q&A systems over a few PDFs to complex, production-ready agentic workflows.
