@@ -1,0 +1,17 @@
+# LangChain Core (flexible versions - use what you have!)
+langchain-core>=1.2.0
+langchain-ollama>=1.0.1
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+
+# Pydantic for structured output
+pydantic>=2.10.0
+
+# Document Loaders (only install what's missing)
+pypdf>=5.0.0
+python-docx>=1.1.0
+unstructured>=0.16.0
+
+# Database (built-in, no install needed)
+# sqlite3 comes with Python
+

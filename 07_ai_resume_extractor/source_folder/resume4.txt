@@ -1,0 +1,68 @@
+SARAH MARTINEZ
+Email: sarah.martinez@email.com
+Phone: +1-555-789-0123
+Location: Austin, Texas
+LinkedIn: linkedin.com/in/sarahmartinez
+
+PROFESSIONAL SUMMARY
+Product Manager with 5 years of experience leading cross-functional teams to deliver customer-centric products. Launched 4 products from 0-to-1 generating $12M in ARR. Expert in user research, roadmap planning, and data-driven decision making.
+
+SKILLS
+Product Management: Roadmap Planning, User Research, A/B Testing, Agile/Scrum
+Analytics: SQL, Python, Tableau, Google Analytics, Mixpanel
+Tools: JIRA, Confluence, Figma, Miro, Amplitude
+Frameworks: Jobs-to-be-Done, OKRs, RICE Prioritization
+
+WORK EXPERIENCE
+
+Senior Product Manager | TechFlow Solutions | Austin, TX
+March 2021 - Present
+- Led product strategy for B2B SaaS platform serving 300+ enterprise customers
+- Launched AI-powered search feature increasing user engagement by 55% and generating $6M ARR
+- Managed roadmap for cross-functional team of 10 engineers and 2 designers
+- Conducted 40+ customer interviews and usability tests to validate product hypotheses
+- Implemented OKR framework resulting in 35% improvement in team productivity
+- Increased NPS score from 42 to 68 through iterative product improvements
+
+Product Manager | StartupVentures Inc. | San Francisco, CA
+June 2019 - February 2021
+- Owned product for mobile app with 1.5M monthly active users
+- Increased retention by 40% through personalized onboarding flow based on user segments
+- Launched freemium-to-premium conversion funnel generating $4M in first year
+- Ran 15+ A/B tests analyzing behavior of 200K+ users to optimize features
+- Collaborated with marketing on go-to-market strategy for 3 major product releases
+
+Associate Product Manager | Digital Innovations Co. | Seattle, WA
+January 2019 - May 2019
+- Supported senior PM on e-commerce marketplace platform
+- Gathered user feedback through surveys reaching 500+ customers
+- Created PRDs and user stories for engineering sprints
+- Analyzed product metrics using SQL to identify growth opportunities
+
+EDUCATION
+
+MBA with Product Management Concentration
+University of Texas at Austin, McCombs School of Business
+Graduated: May 2019
+GPA: 3.8/4.0
+
+Bachelor of Science in Computer Science
+University of California, Berkeley
+Graduated: May 2017
+GPA: 3.7/4.0
+
+CERTIFICATIONS
+- Certified Scrum Product Owner (CSPO) - Scrum Alliance - 2020
+- Pragmatic Marketing Certified (PMC) Level III - 2021
+- Google Analytics Individual Qualification - 2022
+
+AWARDS & RECOGNITION
+- Product Manager of the Year - TechFlow Solutions - 2023
+- Top 10 Product Launches - ProductHunt - 2022
+- Winner, Startup Weekend Austin - Best Product Pitch - 2018
+
+PROJECTS & ACHIEVEMENTS
+- Launched customer referral program that acquired 50K new users in 6 months
+- Reduced customer churn by 25% through proactive engagement features
+- Shipped 12 major features on-time and on-budget in 2023
+- Grew monthly active users from 800K to 1.5M in 18 months
