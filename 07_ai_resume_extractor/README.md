@@ -1,34 +1,63 @@
-# AI Resume Extractor
+# AI Resume Extractor - Structured Output with Small LLMs
 
 **Extract structured data from resumes using AI (LangChain + Pydantic + Ollama)**
 
 ## What This Does
 
-Takes messy resume files (PDF, DOCX, TXT) and extracts clean, structured data:
-- Contact info (name, email, phone, location)
-- Skills
-- Work experience
-- Education
+Converts unstructured resume files into clean, structured database records using **Two-Pass Extraction** - a production technique for handling verbose small language models.
 
-**Input:** Resume file (any format)
-**Output:** Clean JSON data ready for database
+**Key Features:**
+- 📄 Supports PDF, DOCX, and TXT files
+- 🤖 Uses local LLM (Ollama qwen3:4b) - no API costs
+- ✅ Validates data with Pydantic models
+- 💾 Saves to SQLite database
+- 🗑️ Auto-deletes processed files
 
 ---
 
-## The Plan (What We're Building)
+## The Problem: Verbose Models
+
+Small LLM models tend to be "chatty" - they explain their thinking instead of returning clean data.
+
+**Example:**
+```
+Input: "Extract skills from this resume"
+Output: "Well, looking at the resume, I can see Python mentioned in the experience section, and also JavaScript which appears in the projects..."
+```
+
+**We need:** `["Python", "JavaScript"]`
+
+---
+
+## The Solution: Two-Pass Extraction
+
+**Pass 1: Extract** (let the model work naturally)
+- Ask for information
+- Model can think/explain
+
+**Pass 2: Clean** (force structured format)
+- Take Pass 1 output
+- Ask model to return ONLY structured data
+- Get clean result
+
+This technique works with small, local models without needing expensive API calls or function calling features.
+
+---
+
+## Architecture
 
 ```
-User drops resumes → source_folder/
-↓
-Run program (python main.py)
-↓
-AI extracts structured data
-↓
-Saves to SQLite database
-↓
-Deletes processed files
-↓
-User can query/export from database
+source_folder/ (drop resumes here)
+    ↓
+file_loader.py (PDF/DOCX/TXT → text)
+    ↓
+parser_production.py (Two-pass AI extraction)
+    ↓
+models.py (Pydantic validation)
+    ↓
+database.py (SQLite storage)
+    ↓
+Structured data in database ✅
 ```
 
 ---
@@ -37,51 +66,76 @@ User can query/export from database
 
 ```
 07_ai_resume_extractor/
-├── models.py           ✅ DONE - Data structure (Pydantic models)
-├── file_loader.py      🔜 TODO - Load PDF/DOCX/TXT files
-├── config.py           🔜 TODO - Settings and prompts
-├── parser.py           🔜 TODO - AI extraction logic
-├── database.py         🔜 TODO - SQLite operations
-├── main.py             🔜 TODO - Main program
-├── reset_db.py         🔜 TODO - Reset database utility
-├── source_folder/      📁 Drop resumes here
-├── output/             📁 Exported files go here
-└── README.md           📄 This file
+├── models.py                 ✅ Pydantic data models
+├── file_loader.py            ✅ Load PDF/DOCX/TXT files
+├── config.py                 ✅ Settings and prompts
+├── parser.py                 ✅ Single-pass parser (simple)
+├── parser_production.py      ✅ Two-pass parser (production)
+├── database.py               ✅ SQLite operations
+├── main.py                   ✅ Main orchestrator
+├── requirements.txt          📄 Dependencies
+├── source_folder/            📁 Drop resumes here
+└── output/                   📁 Exports (future)
 ```
 
 ---
 
-## What We've Built So Far
+## Installation
 
-### ✅ models.py (Completed)
+```bash
+# Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
 
-**4 Pydantic Models:**
+# Pull model
+ollama pull qwen3:4b
 
-**1. ContactInfo**
+# Clone repo
+git clone <your-repo-url>
+cd langchain_learning/examples/07_ai_resume_extractor
+
+# Install dependencies (use main venv or create new one)
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+**1. Drop resume files in `source_folder/`**
+```bash
+cp your_resume.pdf source_folder/
+```
+
+**2. Run the extractor**
+```bash
+python main.py
+```
+
+**3. Check the database**
+```bash
+sqlite3 resumes.db "SELECT * FROM resumes;"
+```
+
+**Output:**
+- ✅ Extracted contact info (name, email, phone, location)
+- ✅ Skills as JSON array
+- ✅ Work experience (company, title, duration)
+- ✅ Professional summary
+- ✅ Source files deleted
+
+---
+
+## Data Models
+
+### ContactInfo
 ```python
 - name: str (required)
 - email: str (required)
-- phone: str (required) - 10 digits, no formatting
-- location: str (optional) - City only
+- phone: str (required) - 10 digits only
+- location: str (optional) - city name only
 ```
 
-**2. JobExperience**
-```python
-- company: str
-- title: str
-- duration: str
-- responsibilities: List[str]
-```
-
-**3. Education**
-```python
-- institution: str
-- degree: str
-- field: str (optional)
-- year: str (optional)
-```
-
-**4. Resume (Main Model)**
+### Resume
 ```python
 - contact: ContactInfo
 - summary: str (optional)
@@ -90,120 +144,93 @@ User can query/export from database
 - education: List[Education]
 ```
 
-**Why Pydantic?**
-- Validates data automatically
-- Type safety (ensures email is string, phone is 10 digits, etc.)
-- Easy conversion to JSON for database
-
-**Example:**
-```python
-from models import Resume, ContactInfo, JobExperience, Education
-
-resume = Resume(
-    contact=ContactInfo(
-        name="Sarah Martinez",
-        email="sarah@email.com",
-        phone="5557890123",
-        location="Austin"
-    ),
-    skills=["Python", "SQL", "Tableau"],
-    experience=[
-        JobExperience(
-            company="TechFlow",
-            title="Product Manager",
-            duration="2021-Present",
-            responsibilities=["Led team of 10", "Launched $6M product"]
-        )
-    ],
-    education=[
-        Education(
-            institution="UT Austin",
-            degree="MBA",
-            year="2019"
-        )
-    ]
-)
-
-# Convert to JSON for database
-resume_json = resume.model_dump()
-```
-
 ---
 
 ## Tech Stack
 
-- **Python**: 3.10+
-- **LangChain**: 1.2.0+ (AI orchestration)
-- **Pydantic**: 2.10+ (data validation)
-- **Ollama**: Local LLM (qwen3:4b model)
-- **Document Loaders**: pypdf, python-docx, unstructured
-- **Database**: SQLite (built-in)
+- **LangChain** 1.2+ - AI orchestration
+- **Pydantic** 2.10+ - Data validation
+- **Ollama** - Local LLM runtime
+- **qwen3:4b** - Small, fast model
+- **SQLite** - Database
+- **PyPDF, python-docx, unstructured** - File loaders
 
 ---
 
-## Installation
+## Key Concepts
 
-```bash
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+### 1. Two-Pass Extraction
+Handles verbose model output by:
+1. Extracting (with flexibility)
+2. Cleaning (with structure)
 
-# Install dependencies
-pip install -r requirements.txt
+### 2. Pydantic Validation
+- Type safety
+- Automatic validation
+- Clean error messages
 
-# Verify Ollama is running
-ollama list  # Should show qwen3:4b
+### 3. Multi-File Architecture
+- Separation of concerns
+- Testable components
+- Production-ready patterns
+
+### 4. Local LLM Usage
+- No API costs
+- Privacy (data stays local)
+- Works offline
+
+---
+
+## Example Output
+
+**Input:** `resume.pdf`
+
+**Database Record:**
+```
+id: 1
+name: Sarah Chen
+email: sarah.chen@email.com
+phone: 5559876543
+location: Austin
+skills: ["Python", "TensorFlow", "SQL", "AWS"]
+summary: "Senior Data Scientist with 6 years experience..."
+experience: [{"company": "DataCorp", "title": "Senior Data Scientist", "duration": "2021-Present"}]
 ```
 
 ---
 
-## Current Status
+## Production Notes
 
-**Completed:**
-- ✅ Project structure setup
-- ✅ Dependencies installed
-- ✅ Data models defined (models.py)
-- ✅ Unit tests passed (all 10 tests)
-- ✅ Sample resumes collected (PDF, DOCX, TXT)
+**This approach is valuable when:**
+- Using small, local models (4B-7B parameters)
+- API costs are a concern
+- Privacy matters (data stays local)
+- Function calling isn't available
 
-**Next Steps:**
-- 🔜 Build file_loader.py (load PDF/DOCX/TXT)
-- 🔜 Build config.py (settings)
-- 🔜 Build parser.py (AI extraction)
-- 🔜 Build database.py (storage)
-- 🔜 Build main.py (orchestrator)
-
----
-
-## Learning Concepts
-
-**Day 7 Concepts Applied:**
-1. **Pydantic BaseModel** - Data validation
-2. **Field descriptions** - Guide AI extraction
-3. **Optional vs Required** - Mandatory vs optional fields
-4. **Nested models** - Models inside models (Resume contains JobExperience)
-5. **Type hints** - str, int, List[str], Optional[str]
-
-**Production Patterns:**
-- Separation of concerns (each file has one job)
-- Type safety (Pydantic validation)
-- Modular architecture (reusable components)
-- Unit testing (verify code works)
+**Alternatives for larger models:**
+- Function calling (OpenAI, Anthropic)
+- Structured output modes
+- Grammar-based sampling
 
 ---
 
 ## Author
 
 **Klement**
-Learning LangChain 1.0 - Building production-grade AI systems
-Date: December 15, 2025
+Learning LangChain - Building production AI systems
+Date: December 16, 2025
+
+---
+
+## License
+
+MIT
 
 ---
 
 ## Notes
 
-- USA resumes only (phone format: 10-digit US numbers)
-- Location: City name only, no state
-- Phone: Clean digits only, extensions removed
+- Optimized for USA resumes (10-digit phone numbers)
+- City-only location format
+- Clean phone digits (no formatting)
 - All data validated before storage
-- Designed for real-world resume parsing scenarios
