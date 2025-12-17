@@ -44,6 +44,7 @@ A **day-by-day learning path** to master LangChain 1.1 and LangGraph 1.0 through
 | **Day 4** | Tools | `day4_calculator_tool.py` | Tool definition, binding, execution |
 | **Day 5** | Memory | `day5_memory_chat.py` | Conversation memory, context management |
 | **Day 6** | RAG Systems | 5 iterations (see below) | Document loading, chunking, vector search |
+| **Day 7** | Structured Output | `07_ai_resume_extractor/` (8 files) | Two-pass extraction, Pydantic, multi-file systems |
 
 ### **Day 6: Building RAG from Scratch (5 Iterations)**
 
@@ -231,6 +232,8 @@ cat day1_README.md
 
 ## 📊 Progress Tracking
 
+**See LEARNING_TRACKER.md for complete progress across all learning paths!**
+
 Mark your progress as you complete each day:
 
 - [ ] Day 1: Messages
@@ -244,6 +247,7 @@ Mark your progress as you complete each day:
   - [ ] Iteration 3: Vector Embeddings
   - [ ] Iteration 4: Multi-Document
   - [ ] Iteration 5: Hybrid Search
+- [ ] Day 7: Structured Output (AI Resume Extractor)
 
 ---
 
@@ -265,11 +269,50 @@ Mark your progress as you complete each day:
 
 ---
 
+## 🎯 Parallel Learning Paths
+
+**This repository contains 3 integrated learning tracks:**
+
+### **Track 1: Main Curriculum** (You are here)
+Core LangChain concepts from messages to production RAG
+- **File:** `README.md`
+- **Status:** Day 7 complete, Day 8 next
+
+### **Track 2: Agentic Mastery (2025)**
+Build autonomous AI agents using latest patterns
+- **File:** `AGENTIC_MASTERY_CURRICULUM_2025.md`
+- **Based on:** Anthropic's "Building Effective Agents" (2024)
+- **Covers:** 5 core patterns, LangGraph, AutoGen, CrewAI, multi-agent systems
+- **Duration:** 12 weeks (1 hour/day)
+
+### **Track 3: Pseudocode & Planning**
+Master system design and planning before coding
+- **File:** `PSEUDOCODE_EXAMPLES.md`
+- **Focus:** Work backwards, layer identification, dependency mapping
+- **Integrated:** Throughout both curricula
+
+### **Complete Progress Tracking:**
+- **File:** `LEARNING_TRACKER.md`
+- Tracks ALL learning paths
+- Daily log system
+- Progress statistics
+- Never miss anything!
+
+**Recommendation:**
+- Complete Main Curriculum Days 1-7 first
+- Then combine Main + Agentic in parallel
+- Use pseudocode planning for every new project
+
+---
+
 ## 🚀 Ready to Start?
 
 ```bash
 # Let's begin your LangChain mastery journey!
 cat day1_README.md
+
+# Or view complete learning paths:
+cat LEARNING_TRACKER.md
 ```
 
 ---

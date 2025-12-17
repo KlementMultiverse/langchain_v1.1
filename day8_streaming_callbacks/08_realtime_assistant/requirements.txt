@@ -1,0 +1,16 @@
+# LangChain Core
+langchain-core>=1.2.0
+langchain-groq>=1.1.0
+
+# Environment variables
+python-dotenv>=1.2.0
+
+# VibeVoice TTS (install separately - see README)
+# Install from: https://github.com/microsoft/VibeVoice
+# pip install -e /path/to/VibeVoice
+
+# PyTorch (for VibeVoice)
+# Already installed with VibeVoice dependencies
+
+# Audio playback (included with VibeVoice)
+# No additional requirements
